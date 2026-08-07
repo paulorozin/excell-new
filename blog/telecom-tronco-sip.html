@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O que é Tronco SIP e Como Reduzir Custos de Ligações nas Empresas | EXCELL Engenharia</title>
+  <meta name="description" content="Guia técnico sobre Tronco SIP (SIP Trunking): protocolos RFC 3261/SDP/RTP, seleção de codecs, dimensionamento por Erlang B, DDR e segurança com SBC." />
+  <meta name="keywords" content="tronco sip, sip trunking, protocolo sip rfc 3261, codec g711 g729, ddr discagem direta ramal, erlang b telefonia, sbc session border controller" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://excellengenharia.com.br/blog/telecom-tronco-sip.html" />
+  <meta property="og:title" content="O que é Tronco SIP e Como Reduzir Custos de Ligações nas Empresas" />
+  <meta property="og:description" content="Entenda o funcionamento técnico do Tronco SIP e como substituir E1/PRI para otimizar custos com máxima qualidade de áudio." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+<main class="blog-article">
+  <div class="article-header">
+    <div class="container">
+      <a href="/blog.html" class="article-back">← Voltar ao Blog</a>
+      <span class="blog-card-cat cat-telecom" style="margin-bottom:1rem;">Telecomunicações</span>
+      <h1>O que é Tronco SIP e Como Reduzir Custos de Ligações nas Empresas</h1>
+      <div class="article-meta">EXCELL Engenharia e Tecnologia · Engenharia de Telecomunicações</div>
+    </div>
+  </div>
+  <div class="article-body container">
+    <p>Na arquitetura tradicional de telecomunicações corporativas, a conexão entre o PABX de uma empresa e a rede pública de telefonia comutada (STFC - Serviço Telefônico Fixo Comutado) era realizada obrigatoriamente por meio de links físicos dedicados, tais como feixes E1/PRI (Primary Rate Interface) contendo 30 canais de 64 kbps, ou linhas analógicas individuais (FXO). Essa abordagem impunha custos fixos elevados, pouca flexibilidade e rigidez de dimensionamento.</p>
+
+    <p>O <strong>Tronco SIP (SIP Trunking)</strong> surgiu como o padrão global de conectividade de voz sobre IP (VoIP), substituindo as conexões de circuito físico por links de dados IP lógicos. Este artigo detalha a fundamentação técnica da sinalização SIP, os cálculos de largura de banda por codec, a aplicação da teoria das filas (Erlang B) para dimensionamento e os mecanismos de segurança para otimização tarifária.</p>
+
+    <h2>1. Fundamentação Protocolar do Tronco SIP</h2>
+    <p>Diferente de um canal telefônico analógico ou digital E1, onde a sinalização e o áudio trafegam em intervalos de tempo específicos (TDM - Time Division Multiplexing), o Tronco SIP opera inteiramente sobre a pilha de protocolos TCP/IP e UDP. Três especificações da IETF (*Internet Engineering Task Force*) regem o seu funcionamento:</p>
+
+    <ul>
+      <li><strong>SIP (Session Initiation Protocol - RFC 3261):</strong> Protocolo de camada de aplicação responsável por estabelecer, modificar e encerrar sessões multimídia. Utiliza mensagens de texto similares ao HTTP (ex.: `INVITE`, `200 OK`, `ACK`, `BYE`, `CANCEL`);</li>
+      <li><strong>SDP (Session Description Protocol - RFC 4566):</strong> Negocia os parâmetros de mídia entre as pontas, tais como IP de destino, portas UDP, codecs suportados e taxas de amostragem;</li>
+      <li><strong>RTP / RTCP (Real-time Transport Protocol - RFC 3550):</strong> Transporta o fluxo codificado de voz em pacotes UDP de tempo real. O RTCP monitora a qualidade da transmissão (perda de pacotes, jitter e latência).</li>
+    </ul>
+
+    <blockquote>
+      <p>"O Tronco SIP separa rigidamente o plano de controle (sinalização SIP via TCP/UDP 5060 ou TLS 5061) do plano de mídia (fluxo de voz RTP via portas UDP dinâmicas), permitindo que a voz navegue por caminhos otimizados de rede."</p>
+    </blockquote>
+
+    <h2>2. Seleção de Codecs de Áudio e Dimensionamento de Banda</h2>
+    <p>Para garantir que as chamadas telefônicas mantenham clareza de áudio sem sobrecarregar o link de internet da empresa, os engenheiros de telecomunicações selecionam e configuram os codecs de compressão adequados à infraestrutura de dados.</p>
+
+    <h3>Comparativo Técnico dos Principais Codecs:</h3>
+
+    <ul>
+      <li><strong>G.711 (PCM - Pulse Code Modulation):</strong> Codec sem compressão de alta fidelidade. Opera com taxa de amostragem de 8 kHz e quantização de 64 kbps (variantes a-law para Brasil/Europa e u-law para América do Norte). Acrescido dos cabeçalhos Ethernet, IP, UDP e RTP, o consumo real de banda por chamada é de aproximadamente <strong>87,2 kbps</strong> (bidirecional). Oferece excelente pontuação MOS (4,4);</li>
+      <li><strong>G.729a (CS-ACELP):</strong> Codec de alta compressão que reduz o payload de áudio para apenas 8 kbps. Com o overhead de cabeçalhos de rede, o consumo real por chamada cai para aproximadamente <strong>31,2 kbps</strong>. É ideal para locais com conexões de banda limitada, mantendo um MOS aceitável (3,9);</li>
+      <li><strong>Opus (RFC 6716):</strong> Codec versátil de banda larga que adapta dinamicamente sua taxa de bits (de 6 kbps a 510 kbps) e amostragem (de 8 kHz a 48 kHz) em resposta às oscilações de jitter e perda de pacotes da rede.</li>
+    </ul>
+
+    <h2>3. Numeração DDR (DID) e Roteamento Inteligente</h2>
+    <p>O Tronco SIP elimina a dependência de cabos físicos para a atribuição de números telefônicos. Por meio de blocos de <strong>DDR (Discagem Direta a Ramal / DID - Direct Inward Dialing)</strong>, a operadora SIP atribui uma faixa de números públicos à empresa que são entregues sobre o mesmo tronco IP.</p>
+
+    <p>Quando uma chamada externa é destinada ao número público `(43) 2018-1301`, o servidor SIP da operadora envia um cabeçalho `INVITE sip:4320181301@pabx.empresa.com.br`. O PABX em Nuvem lê o cabeçalho *To* ou *Request-URI* e encaminha a chamada diretamente para a extensão correspondente, sem necessidade de intervenção de telefonista ou canal físico exclusivo.</p>
+
+    <h2>4. Dimensionamento de Canais com a Formula de Erlang B</h2>
+    <p>Uma das maiores vantagens financeiras do Tronco SIP em relação aos feixes E1/PRI é a capacidade de contratar exatamente a quantidade de canais simultâneos necessária, sem a rigidez dos blocos de 30 canais do E1.</p>
+
+    <p>Para determinar o número ideal de canais simultâneos em uma empresa com 200 ramais, a EXCELL Engenharia aplica a fórmula da perda de Erlang B, considerando a intensidade de tráfego na Hora de Maior Movimento (HMM):</p>
+
+    <p style="text-align:center; font-weight:bold; margin:1rem 0;">A = (N × M) / 3600</p>
+    <p>Onde <strong>A</strong> é a carga de tráfego em Erlangs, <strong>N</strong> é o número de chamadas registradas na HMM e <strong>M</strong> é a duração média da chamada em segundos. Aplicando um grau de serviço (GoS - Grade of Service) estipulado em 1% de probabilidade de bloqueio (P.01), uma empresa com 20 Erlangs de tráfego necessitará de 29 canais SIP simultâneos.</p>
+
+    <p>Enquanto no modelo legado seria obrigatório contratar 2 links E1 (60 canais, gerando 50% de ociosidade paga), no Tronco SIP contrata-se rigorosamente os 29 canais necessários, podendo expandir temporariamente em datas comemorativas de pico com um único clique no portal.</p>
+
+    <h2>5. Segurança e Interoperabilidade com SBC (Session Border Controller)</h2>
+    <p>Expor portas de sinalização SIP diretamente para a internet pública sem proteção adequada sujeita a infraestrutura corporativa a ataques de *toll fraud* (fraude tarifária de chamadas internacionais), ataques de negação de serviço (DoS/DDoS) e varreduras de varredura automatizadas (*SIP scanners* como Sipvicious).</p>
+
+    <p>A EXCELL Engenharia implementa o <strong>SBC (Session Border Controller)</strong> no perímetro da rede. O SBC atua como um firewall especializado em VoIP, desempenhando as seguintes funções críticas:</p>
+    <ul>
+      <li><strong>Ocultação da Topologia Interna:</strong> Reescreve cabeçalhos SIP para ocultar os endereços IP privados da LAN corporativa;</li>
+      <li><strong>Criptografia TLS e SRTP:</strong> Estabelece túneis criptografados para impedir a interceptação de áudio (*eavesdropping*);</li>
+      <li><strong>Proteção Contra Fraudes:</strong> Aplica regras de *rate limiting* e bloqueio de destino internacional não autorizado;</li>
+      <li><strong>Adaptação de Protocolo:</strong> Realiza a conversão de codecs e correções de sintaxe SIP entre o PABX corporativo e a operadora STFC.</li>
+    </ul>
+
+    <h2>Conclusão</h2>
+    <p>A adoção do Tronco SIP, combinada à portabilidade numérica dos contratos vigentes, proporciona reduções de até 60% nas faturas de telefonia fixa e móvel. Ao eliminar assinaturas de linhas físicas ociosas e otimizar o roteamento de menor custo (LCR - *Least Cost Routing*), as empresas obtêm comunicação robusta, escalável e com auditoria em tempo real.</p>
+  </div>
+  <div class="cta-section">
+    <div class="container">
+      <h2>Otimize seus Custos de Telefonia com Tronco SIP</h2>
+      <p>Solicite uma análise técnica de tráfego e infraestrutura com a equipe de engenheiros da EXCELL Engenharia para dimensionar o Tronco SIP ideal para sua empresa.</p>
+      <div class="cta-actions">
+        <a href="/contato.html" class="btn btn-primary">Fale com um Engenheiro</a>
+        <a href="https://wa.me/554320181300" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp (43) 2018-1300</a>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

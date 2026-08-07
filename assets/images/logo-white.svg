@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" role="img" aria-label="EXCELL Engenharia e Tecnologia">
+  <!-- E -->
+  <g fill="#FFFFFF">
+    <rect x="0" y="10" width="32" height="8"/>
+    <rect x="0" y="28" width="26" height="8"/>
+    <rect x="0" y="46" width="32" height="8"/>
+    <rect x="0" y="10" width="8" height="44"/>
+  </g>
+  <!-- X -->
+  <g>
+    <line x1="44" y1="10" x2="80" y2="54" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+    <line x1="98" y1="10" x2="62" y2="54" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <!-- C -->
+  <g fill="#FFFFFF">
+    <rect x="108" y="10" width="32" height="8"/>
+    <rect x="108" y="46" width="32" height="8"/>
+    <rect x="108" y="10" width="8" height="44"/>
+  </g>
+  <!-- E2 -->
+  <g fill="#FFFFFF">
+    <rect x="150" y="10" width="32" height="8"/>
+    <rect x="150" y="28" width="26" height="8"/>
+    <rect x="150" y="46" width="32" height="8"/>
+    <rect x="150" y="10" width="8" height="44"/>
+  </g>
+  <!-- L1 -->
+  <g fill="#FFFFFF">
+    <rect x="192" y="10" width="8" height="44"/>
+    <rect x="192" y="46" width="32" height="8"/>
+  </g>
+  <!-- L2 -->
+  <g fill="#FFFFFF">
+    <rect x="234" y="10" width="8" height="44"/>
+    <rect x="234" y="46" width="32" height="8"/>
+  </g>
+  <!-- Engenharia e Tecnologia -->
+  <text x="0" y="88" font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="16" letter-spacing="3" fill="#F26522">ENGENHARIA E TECNOLOGIA</text>
+</svg>

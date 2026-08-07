@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://excellengenharia.com.br/sitemap.xml

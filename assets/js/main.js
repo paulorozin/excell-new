@@ -14,7 +14,7 @@
     <header id="site-header">
       <div class="container header-inner">
         <a href="/index.html" aria-label="EXCELL Engenharia">
-          <img class="site-logo" src="/assets/images/logo.svg" alt="EXCELL Engenharia e Tecnologia" />
+          <img class="site-logo" src="/assets/images/logo-excell.png" alt="EXCELL Engenharia e Tecnologia" />
         </a>
         <nav class="site-nav" aria-label="Navegação principal">
           <a href="/index.html" class="nav-link">Home</a>
@@ -85,7 +85,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img class="site-logo" src="/assets/images/logo-white.svg" alt="EXCELL Engenharia e Tecnologia" />
+            <img class="site-logo" src="/assets/images/logo-excell.png" alt="EXCELL Engenharia e Tecnologia" style="filter: brightness(0) invert(1);" />
             <p>Engenharia de telecomunicações, perícias judiciais e laudos técnicos com rigor metodológico e responsabilidade técnica.</p>
             <div class="social-links">
               <a href="https://www.instagram.com/excell_engenharia" target="_blank" rel="noopener" class="social-link" aria-label="Instagram EXCELL">

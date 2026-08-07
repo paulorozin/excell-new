@@ -3,19 +3,21 @@
 Site institucional completo desenvolvido em HTML5, CSS3 e JavaScript puro.  
 Pronto para hospedagem no **GitHub Pages** com integração Cloudflare.
 
+**Repositório:** [paulorozin/excell-sitenovo](https://github.com/paulorozin/excell-sitenovo)
+
 ---
 
 ## Estrutura do Projeto
 
 ```
-excell-new/
+excell-sitenovo/
 ├── index.html                    # Home
 ├── sobre.html                    # A EXCELL
 ├── telecomunicacoes.html         # Telecomunicações Corporativas
 ├── pericias.html                 # Perícias de Engenharia
 ├── assistente-tecnico.html       # Assistente Técnico
 ├── laudos.html                   # Laudos Técnicos
-├── blog.html                     # Blog (listagem)
+├── blog.html                     # Blog (listagem + filtros por categoria)
 ├── contato.html                  # Contato
 ├── sitemap.xml                   # Sitemap para indexação Google
 ├── robots.txt
@@ -49,8 +51,7 @@ excell-new/
     ├── js/
     │   └── main.js               # Header/footer injetados, menu mobile, filtros
     └── images/
-        ├── logo.svg              # Logo colorida (fundo claro)
-        └── logo-white.svg        # Logo branca (fundo escuro)
+        └── logo-excell.png       # Logo oficial EXCELL (colorida no header, branca no footer via CSS filter)
 ```
 
 ---
@@ -70,14 +71,14 @@ excell-new/
 2. Source: **Deploy from a branch**
 3. Branch: `main` / `root`
 4. Aguarde o deploy (≈ 1 minuto)
-5. Acesse: `https://paulorozin.github.io/excell-new/`
+5. Acesse: `https://paulorozin.github.io/excell-sitenovo/`
 
 ### Configuração com Cloudflare (domínio próprio)
 
 1. No Cloudflare, adicione um registro `CNAME`:  
    - Name: `@` (ou `www`)  
    - Target: `paulorozin.github.io`
-2. No GitHub Pages, adicione seu domínio personalizado em **Custom domain**
+2. No GitHub Pages, adicione seu domínio personalizado em **Custom domain**: `excellengenharia.com.br`
 3. Marque **Enforce HTTPS**
 
 ---
@@ -104,14 +105,6 @@ Antes de publicar, busque por `[PLACEHOLDER]` no código e substitua:
 | Telefone | (43) 2018-1300 |
 | E-mail | contato@excellengenharia.com.br |
 | Instagram | instagram.com/excell_engenharia |
-
----
-
-## Customizações adicionais
-
-Para adicionar a logo PNG real (fornecida):
-1. Salve o arquivo como `assets/images/logo.png` e `assets/images/logo-white.png`
-2. Em `main.js`, altere as referências de `.svg` para `.png` nas tags `<img>`
 
 ---
 

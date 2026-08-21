@@ -68,7 +68,7 @@ p.lead{font-size:1.2rem;font-weight:400;color:var(--gray-800);line-height:1.6}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:92px}
 .logo-link{display:flex;align-items:center;padding-right:2rem}
 .site-logo-img{
-    width:220px !important;
+    width:200px !important;
     height:auto !important;
     display:block;
     flex-shrink:0;

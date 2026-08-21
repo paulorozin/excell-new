@@ -7,42 +7,69 @@
   // 1. Highlight Active Nav Link
   function highlightActiveNav() {
     const path = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav a');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav a, .dropdown-menu a');
     
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (!href) return;
       
-      const cleanHref = href.replace(/^\.\.\//, '').replace(/^\//, '');
+      const cleanHref = href.split('#')[0].replace(/^\.\.\//, '').replace(/^\//, '');
       const cleanPath = path.replace(/^\//, '');
 
       if (cleanPath.endsWith(cleanHref) || (cleanPath === '' && cleanHref === 'index.html')) {
         link.classList.add('active');
+        // also mark parent nav-has-dropdown link if inside dropdown
+        const parentDropdown = link.closest('.nav-has-dropdown');
+        if (parentDropdown) {
+          const parentLink = parentDropdown.querySelector('.nav-link');
+          if (parentLink) parentLink.classList.add('active');
+        }
       }
     });
   }
 
-  // 2. Mobile Menu Toggle
+  // 2. Mobile Menu Toggle & Off-Canvas Overlay
   function initMobileNav() {
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobile-nav');
 
     if (!hamburger || !mobileNav) return;
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
+    // Create overlay if not present
+    let overlay = document.querySelector('.mobile-nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'mobile-nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function toggleMenu(open) {
+      const isOpen = open !== undefined ? open : !mobileNav.classList.contains('open');
+      mobileNav.classList.toggle('open', isOpen);
+      overlay.classList.toggle('open', isOpen);
       hamburger.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', () => toggleMenu());
+    overlay.addEventListener('click', () => toggleMenu(false));
+
+    // Mobile accordions for dropdown titles
+    document.querySelectorAll('.mobile-dropdown-title').forEach(title => {
+      title.addEventListener('click', () => {
+        const items = title.nextElementSibling;
+        if (items && items.classList.contains('mobile-dropdown-items')) {
+          items.classList.toggle('open');
+          const arrow = title.querySelector('span');
+          if (arrow) arrow.textContent = items.classList.contains('open') ? '▴' : '▾';
+        }
+      });
     });
 
     mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      if (link.classList.contains('mobile-dropdown-title')) return;
+      link.addEventListener('click', () => toggleMenu(false));
     });
   }
 
@@ -95,7 +122,7 @@
     });
   }
 
-  // Initialize all functions on DOMReady
+  // Initialize on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', () => {
     highlightActiveNav();
     initMobileNav();

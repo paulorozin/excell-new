@@ -67,7 +67,12 @@ p.lead{font-size:1.2rem;font-weight:400;color:var(--gray-800);line-height:1.6}
 .site-header{position:sticky;top:0;background:var(--white);box-shadow:var(--shadow-sm);z-index:1000;transition:var(--transition)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:92px}
 .logo-link{display:flex;align-items:center;padding-right:2rem}
-.site-logo-img{height:70px;width:450px;display:block}
+.site-logo-img{
+    width:220px !important;
+    height:auto !important;
+    display:block;
+    flex-shrink:0;
+}
 .site-nav{display:flex;align-items:center;gap:1.6rem}
 .nav-link{font-family:var(--font-head);font-weight:600;font-size:.84rem;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);padding:.75rem 0;position:relative;display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap}
 .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent);transition:var(--transition)}

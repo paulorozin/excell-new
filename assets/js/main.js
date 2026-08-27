@@ -7,23 +7,16 @@
   // 1. Highlight Active Nav Link
   function highlightActiveNav() {
     const path = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav a, .dropdown-menu a');
-    
-    navLinks.forEach(link => {
+    const page = path.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileLinks = document.querySelectorAll('.mobile-nav > a');
+
+    [...navLinks, ...mobileLinks].forEach(link => {
       const href = link.getAttribute('href');
       if (!href) return;
-      
-      const cleanHref = href.split('#')[0].replace(/^\.\.\//, '').replace(/^\//, '');
-      const cleanPath = path.replace(/^\//, '');
-
-      if (cleanPath.endsWith(cleanHref) || (cleanPath === '' && cleanHref === 'index.html')) {
+      const targetPage = href.split('#')[0].split('/').pop();
+      if (targetPage === page || (page === '' && targetPage === 'index.html')) {
         link.classList.add('active');
-        // also mark parent nav-has-dropdown link if inside dropdown
-        const parentDropdown = link.closest('.nav-has-dropdown');
-        if (parentDropdown) {
-          const parentLink = parentDropdown.querySelector('.nav-link');
-          if (parentLink) parentLink.classList.add('active');
-        }
       }
     });
   }
@@ -95,30 +88,48 @@
     });
   }
 
-  // 4. Contact Form Handling
+  // 4. Contact Form Handling (Direct Dispatch via WhatsApp/Email without fake backend)
   function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const nome = (document.getElementById('nome') || {}).value || '';
+      const empresa = (document.getElementById('empresa') || {}).value || '';
+      const email = (document.getElementById('email') || {}).value || '';
+      const telefone = (document.getElementById('telefone') || {}).value || '';
+      const assuntoSelect = document.getElementById('assunto');
+      const assunto = assuntoSelect && assuntoSelect.options[assuntoSelect.selectedIndex] ? assuntoSelect.options[assuntoSelect.selectedIndex].text : '';
+      const mensagem = (document.getElementById('mensagem') || {}).value || '';
+
+      if (!nome || !email || !telefone || !mensagem) {
+        alert('Por favor, preencha todos os campos obrigatórios (*).');
+        return;
+      }
+
       const btn = form.querySelector('button[type="submit"]');
-      if (!btn) return;
+      if (btn) {
+        const originalText = btn.textContent;
+        btn.textContent = 'Abrindo atendimento via WhatsApp...';
+        btn.disabled = true;
 
-      const originalText = btn.textContent;
-      btn.textContent = 'Enviando mensagem...';
-      btn.disabled = true;
+        const text = `Olá! Gostaria de uma avaliação técnica da EXCELL Engenharia.\n\n*Nome:* ${nome}\n*Empresa:* ${empresa || 'Não informada'}\n*E-mail:* ${email}\n*Telefone:* ${telefone}\n*Área:* ${assunto}\n*Mensagem:* ${mensagem}`;
+        const whatsappUrl = `https://wa.me/554320181300?text=${encodeURIComponent(text)}`;
 
-      setTimeout(() => {
-        btn.textContent = '✓ Mensagem Enviada com Sucesso!';
-        btn.style.backgroundColor = '#167A3C';
-        form.reset();
         setTimeout(() => {
-          btn.textContent = originalText;
-          btn.disabled = false;
-          btn.style.backgroundColor = '';
-        }, 4000);
-      }, 1000);
+          window.open(whatsappUrl, '_blank');
+          btn.textContent = '✓ Redirecionado para o WhatsApp!';
+          btn.style.backgroundColor = '#167A3C';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.backgroundColor = '';
+            form.reset();
+          }, 3000);
+        }, 600);
+      }
     });
   }
 

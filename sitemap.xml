@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Páginas principais -->
+  <!-- Páginas Principais -->
+  <url>
+    <loc>https://excellengenharia.com.br/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://excellengenharia.com.br/index.html</loc>
     <changefreq>monthly</changefreq>
@@ -8,7 +13,7 @@
   </url>
   <url>
     <loc>https://excellengenharia.com.br/a-excell.html</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -34,33 +39,134 @@
   <url>
     <loc>https://excellengenharia.com.br/blog.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://excellengenharia.com.br/contato.html</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Artigos principais do Blog -->
+  <!-- Artigos do Blog - Telecomunicações (8) -->
   <url>
     <loc>https://excellengenharia.com.br/blog/telecom-integracao-whatsapp.html</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-pabx-nuvem.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-tronco-sip.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-qos-voip.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-softphones.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-pabx-advocacia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-gravacao-lgpd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/telecom-redundancia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigos do Blog - Perícias & Vistorias (5) -->
+  <url>
+    <loc>https://excellengenharia.com.br/blog/pericia-extrajudicial.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/pericia-sobretensoes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/pericia-cadeia-custodia.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://excellengenharia.com.br/blog/pericia-perito-cpc.html</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/pericia-nomeacao.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigos do Blog - Assistência Técnica (5) -->
   <url>
     <loc>https://excellengenharia.com.br/blog/asst-contestacao-toi.html</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://excellengenharia.com.br/blog/asst-engenheiro-advogado.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/asst-impugnar-laudo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/asst-ressarcimento-aneel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/asst-vistoria.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigos do Blog - Laudos de ICMS (5) -->
+  <url>
     <loc>https://excellengenharia.com.br/blog/laudo-quem-tem-direito-icms.html</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/laudo-icms-energia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/laudo-medicao-energia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/laudo-recuperacao-retroativa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellengenharia.com.br/blog/laudo-atualizacao.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>

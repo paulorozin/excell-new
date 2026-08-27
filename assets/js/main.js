@@ -122,11 +122,50 @@
     });
   }
 
+  // 5. Blog Category Filter
+  function initBlogFilters() {
+    const filterButtons = document.querySelectorAll('.blog-filter-btn');
+    const blogCards = document.querySelectorAll('.blog-grid .blog-card');
+
+    if (!filterButtons.length || !blogCards.length) return;
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        blogCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (filter === 'all' || cardCat === filter) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(15px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 200);
+          }
+        });
+      });
+    });
+  }
+
   // Initialize on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', () => {
     highlightActiveNav();
     initMobileNav();
     initScrollAnimations();
     initContactForm();
+    initBlogFilters();
   });
 })();

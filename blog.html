@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog de Engenharia, Telecomunicações e Perícias | EXCELL Engenharia</title>
-  <meta name="description" content="Artigos técnicos completos sobre Cloud PABX, Perícias Judiciais de Engenharia, Assistência Técnica em TOI e Laudo de Crédito de ICMS sobre Energia Elétrica." />
-  <meta name="keywords" content="Blog Engenharia, Artigos Cloud PABX, Perícia Judicial CPC 465, Contestação TOI Energia, Crédito ICMS Indústria" />
+  <title>Blog Técnico | EXCELL Engenharia e Tecnologia</title>
+  <meta name="description" content="Artigos técnicos completos sobre Cloud PABX, Telecomunicações, Perícias Extrajudiciais, Assistência Técnica em TOI e Laudo para Crédito de ICMS de Energia Elétrica." />
+  <meta name="keywords" content="Blog Engenharia, Artigos Cloud PABX, Telefonia IP, Perícia Extrajudicial, Contestação TOI Energia, Crédito ICMS Indústria, Assistente Técnico" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://excellengenharia.com.br/blog.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Blog de Engenharia | EXCELL Engenharia" />
-  <meta property="og:description" content="Artigos técnicos aprofundados sobre telecomunicações, perícias e laudos de engenharia." />
+  <meta property="og:title" content="Blog Técnico | EXCELL Engenharia e Tecnologia" />
+  <meta property="og:description" content="Acervo completo de artigos técnicos especializados sobre telecomunicações, perícias, assistência técnica e laudos de ICMS." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://excellengenharia.com.br/blog.html" />
 
@@ -147,28 +147,39 @@
     <!-- Hero -->
     <section class="page-hero">
       <div class="container">
-        <span class="section-label" style="color: var(--accent);">Conhecimento Técnico</span>
-        <h1>Artigos Especializados por Área de Atuação</h1>
-        <p>Análises aprofundadas sobre Telecomunicações Corporativas, Direito Processual Pericial, Defesa de TOI em Energia e Recuperação de Crédito de ICMS para Indústrias.</p>
+        <span class="section-label" style="color: var(--accent);">Conhecimento Técnico Especializado</span>
+        <h1>Artigos e Estudos Técnicos</h1>
+        <p>Acervo completo de publicações técnicas sobre Telecomunicações Corporativas, Perícias Extrajudiciais e Vistorias, Assistência Técnica Processual e Laudos de ICMS para Indústrias.</p>
       </div>
     </section>
 
-    <!-- Artigos Principais por Categoria -->
+    <!-- Artigos com Filtros Interativos -->
     <section class="section">
       <div class="container">
-        <div class="text-center" style="margin-bottom: 3.5rem;">
-          <span class="section-label">Publicações em Destaque</span>
-          <h2>Artigos Especiais por Especialidade</h2>
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+          <span class="section-label">Categorias de Especialidade</span>
+          <h2>Explore Nossas Publicações Técnicas</h2>
           <div class="divider center"></div>
         </div>
 
+        <!-- Filtros Interativos por Categoria -->
+        <div class="blog-filters" role="tablist" aria-label="Filtrar artigos por especialidade">
+          <button class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos os Artigos <span class="count">23</span></button>
+          <button class="blog-filter-btn" data-filter="telecom" role="tab" aria-selected="false">Telecomunicações <span class="count">8</span></button>
+          <button class="blog-filter-btn" data-filter="pericias" role="tab" aria-selected="false">Perícias &amp; Vistorias <span class="count">5</span></button>
+          <button class="blog-filter-btn" data-filter="assistente" role="tab" aria-selected="false">Assistência Técnica <span class="count">5</span></button>
+          <button class="blog-filter-btn" data-filter="laudos" role="tab" aria-selected="false">Laudos de ICMS <span class="count">5</span></button>
+        </div>
+
+        <!-- Grid com Todos os 23 Artigos -->
         <div class="blog-grid">
-          <!-- Artigo 1: Telecom -->
-          <article class="blog-card">
+
+          <!-- ================= TELECOMUNICAÇÕES (8) ================= -->
+          <article class="blog-card" data-category="telecom">
             <div class="blog-card-body">
-              <span class="blog-tag">Telecomunicações</span>
-              <h3>Integração de Cloud PABX com WhatsApp Business e CRM Corporativo</h3>
-              <p>Como estruturar a arquitetura de Comunicação Unificada unindo a telefonia IP corporativa em nuvem às APIs do WhatsApp Business e sistemas de CRM, garantindo atendimento centralizado e rastreabilidade total.</p>
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>Integração de Cloud PABX com WhatsApp Business API e CRM Corporativo</h3>
+              <p>Como estruturar a arquitetura de Comunicação Unificada unindo a telefonia IP em nuvem às APIs do WhatsApp Business e sistemas de CRM, garantindo atendimento centralizado e rastreabilidade total.</p>
               <div class="blog-meta">
                 <span>Leitura: 8 min</span>
                 <a href="blog/telecom-integracao-whatsapp.html" class="btn-ghost">Ler Artigo Completo →</a>
@@ -176,12 +187,132 @@
             </div>
           </article>
 
-          <!-- Artigo 2: Perícias -->
-          <article class="blog-card">
+          <article class="blog-card" data-category="telecom">
             <div class="blog-card-body">
-              <span class="blog-tag">Perícias Judiciais</span>
-              <h3>O Papel do Perito Judicial de Engenharia Elétrica Conforme o Artigo 465 do CPC</h3>
-              <p>Estudo normativo e processual sobre os deveres, impedimentos, prazos, nomeação e elaboração da prova pericial pelo Perito do Juízo em lides envolvendo sistemas elétricos e telecomunicações.</p>
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>Vantagens do PABX em Nuvem versus Telefonia Tradicional</h3>
+              <p>Análise técnica e financeira comparativa entre PABX em Nuvem (Virtual) e centrais analógicas/digitais tradicionais. Avaliação de TCO, escalabilidade elástica e alta disponibilidade operacional.</p>
+              <div class="blog-meta">
+                <span>Leitura: 7 min</span>
+                <a href="blog/telecom-pabx-nuvem.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="telecom">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>O que é Tronco SIP e Como Reduzir Custos de Ligações nas Empresas</h3>
+              <p>Guia técnico sobre SIP Trunking: protocolos RFC 3261, seleção de codecs de áudio, dimensionamento de canais por Erlang B, números DDR e segurança avançada com Session Border Controller (SBC).</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/telecom-tronco-sip.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="telecom">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>Como Garantir Qualidade de Serviço (QoS) em Chamadas VoIP em Redes de Dados</h3>
+              <p>Guia técnico de engenharia para configuração de marcadores DSCP/EF, CoS 802.1p, Voice VLAN dedicada, controle de jitter, priorização de tráfego e monitoramento de índice MOS (ITU-T G.107).</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/telecom-qos-voip.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="telecom">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>Softphones em Dispositivos Móveis: Segurança e Mobilidade para Home Office</h3>
+              <p>Análise técnica sobre uso de softphones SIP corporativos em smartphones e notebooks: criptografia TLS/SRTP, transposição NAT (STUN/TURN/ICE) e comunicação unificada para equipes distribuídas.</p>
+              <div class="blog-meta">
+                <span>Leitura: 7 min</span>
+                <a href="blog/telecom-softphones.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="telecom">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>PABX Virtual para Escritórios de Advocacia: Gestão de Atendimento</h3>
+              <p>Soluções de telefonia em nuvem com conformidade de sigilo profissional (Lei 8.906/94), URA jurídica segmentada por área do direito, bilhetagem por cliente (timesheet) e gravação segura.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/telecom-pabx-advocacia.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="telecom">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>Gravação de Chamadas Telefônicas Corporativas e Conformidade com a LGPD</h3>
+              <p>Guia legal e técnico sobre gravação de voz corporativa sob a LGPD (Lei 13.709/18): bases legais, notificação audível na URA, armazenamento criptografado AES-256 e políticas de retenção.</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/telecom-gravacao-lgpd.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="telecom">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-telecom">Telecomunicações</span>
+              <h3>Redundância e Alta Disponibilidade em Infraestrutura de Comunicação Unificada</h3>
+              <p>Engenharia de alta resiliência para plataformas de voz corporativa: failover automático de troncos SIP, clusters ativo-ativo/ativo-passivo, redundância geográfica de data center e métricas RTO/RPO.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/telecom-redundancia.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= PERÍCIAS & VISTORIAS (5) ================= -->
+          <article class="blog-card" data-category="pericias">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-pericia">Perícias Técnicas</span>
+              <h3>Perícia Extrajudicial Como Ferramenta de Prevenção de Litígios Corporativos</h3>
+              <p>Saiba como a perícia extrajudicial e a vistoria preventiva em instalações elétricas constatam vícios ocultos, apuram sinistros, agilizam regulação de seguros e reduzem custos contratuais.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/pericia-extrajudicial.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="pericias">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-pericia">Perícias Técnicas</span>
+              <h3>Análise de Sobretensões Transitórias e Queima de Equipamentos Industriais</h3>
+              <p>Investigação técnica e nexo causal sobre queima de maquinários e componentes eletrônicos sensíveis por surtos elétricos em plantas fabris, com base na ABNT NBR 5410 e Resolução ANEEL 1.000/2021.</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/pericia-sobretensoes.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="pericias">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-pericia">Perícias Técnicas</span>
+              <h3>Como Funciona a Cadeia de Custódia de Evidências em Perícias de Engenharia</h3>
+              <p>Entenda os procedimentos formais de preservação probatória: coleta qualificada em campo, lacração numerada, registro fotográfico e guarda de componentes elétricos e de telecomunicações.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/pericia-cadeia-custodia.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="pericias">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-pericia">Perícias Técnicas</span>
+              <h3>O Papel do Perito de Engenharia Elétrica Conforme o Código de Processo Civil</h3>
+              <p>Estudo normativo e processual sobre deveres, impedimentos legais, prazos e elaboração da prova pericial técnica pelo Perito em lides envolvendo instalações de energia e telecomunicações.</p>
               <div class="blog-meta">
                 <span>Leitura: 10 min</span>
                 <a href="blog/pericia-perito-cpc.html" class="btn-ghost">Ler Artigo Completo →</a>
@@ -189,12 +320,24 @@
             </div>
           </article>
 
-          <!-- Artigo 3: Assistente Técnico -->
-          <article class="blog-card">
+          <article class="blog-card" data-category="pericias">
             <div class="blog-card-body">
-              <span class="blog-tag">Assistente Técnico</span>
+              <span class="blog-tag cat-pericia">Perícias Técnicas</span>
+              <h3>Requisitos Técnicos e Credenciamento em Perícias de Engenharia</h3>
+              <p>Requisitos de qualificação técnica, formação especializada, credenciamento profissional e responsabilidade técnica exigidos para a confecção de laudos técnicos e avaliações de engenharia.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/pericia-nomeacao.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= ASSISTÊNCIA TÉCNICA (5) ================= -->
+          <article class="blog-card" data-category="assistente">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-assistente">Assistente Técnico</span>
               <h3>Contestação Técnica de TOI (Termo de Ocorrência e Inspeção) de Energia Elétrica</h3>
-              <p>Passo a passo técnico para desconstituir autos de infração e cobranças retroativas abusivas expedidas por concessionárias de energia com base em laudo divergente e vícios de fiscalização.</p>
+              <p>Passo a passo técnico para desconstituir autos de infração e cobranças retroativas abusivas de distribuidoras de energia através de parecer divergente e identificação de vícios de fiscalização.</p>
               <div class="blog-meta">
                 <span>Leitura: 9 min</span>
                 <a href="blog/asst-contestacao-toi.html" class="btn-ghost">Ler Artigo Completo →</a>
@@ -202,18 +345,115 @@
             </div>
           </article>
 
-          <!-- Artigo 4: Laudos -->
-          <article class="blog-card">
+          <article class="blog-card" data-category="assistente">
             <div class="blog-card-body">
-              <span class="blog-tag">Laudos Técnicos</span>
+              <span class="blog-tag cat-assistente">Assistente Técnico</span>
+              <h3>Como o Assistente Técnico Atua Lado a Lado com o Advogado na Defesa Processual</h3>
+              <p>Saiba como a sinergia entre o especialista técnico e o advogado fortalece a formulação de quesitos estratégicos, fiscalização de vistorias em campo e elaboração de pareceres fundamentados.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/asst-engenheiro-advogado.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="assistente">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-assistente">Assistente Técnico</span>
+              <h3>Como Impugnar um Laudo Pericial Equivocado com Parecer Técnico Divergente</h3>
+              <p>Guia técnico sobre como impugnar laudos periciais com premissas incorretas, demonstrando inconsistências metodológicas, erros de medição ou omissões técnicas por meio de Parecer Divergente.</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/asst-impugnar-laudo.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="assistente">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-assistente">Assistente Técnico</span>
+              <h3>Ressarcimento de Danos Elétricos Conforme a Resolução 1000 da ANEEL (PRODIST)</h3>
+              <p>Guia completo sobre ressarcimento por equipamentos industriais e corporativos danificados por perturbações na rede de distribuição conforme as diretrizes regulatórias da ANEEL.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/asst-ressarcimento-aneel.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="assistente">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-assistente">Assistente Técnico</span>
+              <h3>Acompanhamento de Vistoria Pericial: O que o Assistente Técnico Deve Fiscalizar</h3>
+              <p>Checklist essencial para diligências de campo: inspeção de calibração de instrumentos de medição, documentação fotográfica independente e formulação de quesitos suplementares em ata.</p>
+              <div class="blog-meta">
+                <span>Leitura: 7 min</span>
+                <a href="blog/asst-vistoria.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= LAUDOS TÉCNICOS & ICMS (5) ================= -->
+          <article class="blog-card" data-category="laudos">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-laudo">Laudos Técnicos</span>
               <h3>Quem Tem Direito ao Crédito de ICMS na Fatura de Energia? Guia para Indústrias</h3>
-              <p>Guia definitivo fundamentado no Artigo 33 da Lei Complementar nº 87/1996 (Lei Kandir) demonstrando os requisitos e o método de medição por Laudo de Engenharia para abatimento fiscal.</p>
+              <p>Guia definitivo fundamentado no Artigo 33 da Lei Complementar nº 87/1996 (Lei Kandir) demonstrando os requisitos de processo produtivo e o método de medição técnica para abatimento fiscal.</p>
               <div class="blog-meta">
                 <span>Leitura: 10 min</span>
                 <a href="blog/laudo-quem-tem-direito-icms.html" class="btn-ghost">Ler Artigo Completo →</a>
               </div>
             </div>
           </article>
+
+          <article class="blog-card" data-category="laudos">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-laudo">Laudos Técnicos</span>
+              <h3>Laudo Técnico de ICMS sobre Energia Elétrica: Como Economizar na Fatura</h3>
+              <p>Entenda como o laudo pericial de engenharia com apuração de percentual de energia consumida na industrialização viabiliza a apropriação mensal de créditos tributários com total segurança fiscal.</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/laudo-icms-energia.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="laudos">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-laudo">Laudos Técnicos</span>
+              <h3>Como é Feita a Medição de Energia para Separação do Consumo Produtivo</h3>
+              <p>Metodologia de engenharia elétrica aplicada ao inventário de cargas, fatores de potência, diagramas unifilares e segregação das linhas de produção em relação ao setor administrativo.</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/laudo-medicao-energia.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="laudos">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-laudo">Laudos Técnicos</span>
+              <h3>Recuperação Retroativa dos Últimos 5 Anos de ICMS de Energia Elétrica</h3>
+              <p>Saiba como indústrias podem recuperar até 60 meses retroativos de ICMS recolhidos na conta de energia com base no Art. 168 do CTN e laudo técnico pericial assinado com ART no CREA.</p>
+              <div class="blog-meta">
+                <span>Leitura: 9 min</span>
+                <a href="blog/laudo-recuperacao-retroativa.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="laudos">
+            <div class="blog-card-body">
+              <span class="blog-tag cat-laudo">Laudos Técnicos</span>
+              <h3>Quando Deve Ser Feita a Atualização do Laudo Técnico de ICMS de Energia</h3>
+              <p>Saiba quando atualizar o Laudo Técnico de ICMS da sua indústria, os gatilhos obrigatórios (aquisição de maquinário, reformas no layout elétrico) e os riscos fiscais de laudos desatualizados.</p>
+              <div class="blog-meta">
+                <span>Leitura: 8 min</span>
+                <a href="blog/laudo-atualizacao.html" class="btn-ghost">Ler Artigo Completo →</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -223,14 +463,14 @@
       <div class="container">
         <h2 style="color: var(--white);">Quer discutir um artigo ou apresentar sua demanda?</h2>
         <p style="color: var(--gray-300); margin-bottom: 2rem;">Fale diretamente com nossa equipe técnica para esclarecer dúvidas e apresentar sua demanda com objetividade.</p>
-        <a href="contato.html" class="btn btn-primary">Entrar em Contato</a>
+        <a href="contato.html" class="btn btn-primary">FALE COM UM ESPECIALISTA</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Rozin & Lamounier Ltda. Todos os direitos reservados.<br>CNPJ: 59.746.775/0001-53</p>
+      <p>© 2025 Rozin &amp; Lamounier Ltda. Todos os direitos reservados.<br>CNPJ: 59.746.775/0001-53</p>
     </div>
   </footer>
 

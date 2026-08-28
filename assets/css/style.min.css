@@ -112,12 +112,12 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 .mobile-dropdown-items.open{display:flex;flex-direction:column}
 .mobile-dropdown-items a{font-size:.9rem;font-weight:500;border-bottom:none;padding-block:.4rem}
 
-/* Hero Component - Wide and Spacious */
+/* Hero Component - Balanced Width & Side Breathing Room */
 .hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--blue-slate) 100%);color:var(--white);padding-block:5.5rem 4.5rem;position:relative}
-.hero-content{max-width:100%}
-.hero h1{color:var(--white);margin-bottom:1.5rem;max-width:100%}
+.hero-content{max-width:1060px}
+.hero h1{color:var(--white);margin-bottom:1.5rem;max-width:1000px}
 .hero p,
-.hero p.lead{color:var(--gray-300);font-size:1.15rem;line-height:1.65;margin-bottom:2.25rem;max-width:100%}
+.hero p.lead{color:var(--gray-300);font-size:1.15rem;line-height:1.65;margin-bottom:2.25rem;max-width:1020px}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 
 /* Page Hero Header */

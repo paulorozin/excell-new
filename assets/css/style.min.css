@@ -114,7 +114,8 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 
 /* Hero Component - Balanced Width & Side Breathing Room */
 .hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--blue-slate) 100%);color:var(--white);padding-block:5.5rem 4.5rem;position:relative}
-.hero-content{max-width:1060px}
+.hero--home{background:linear-gradient(135deg,rgba(6,20,38,.92) 0%,rgba(10,30,58,.86) 55%,rgba(28,57,94,.82) 100%),url('../images/home/hero-excell.jpg') center/cover no-repeat;padding-block:6.5rem 5.5rem}
+.hero-content{max-width:1060px;position:relative;z-index:1}
 .hero h1{color:var(--white);margin-bottom:1.5rem;max-width:1000px}
 .hero p,
 .hero p.lead{color:var(--gray-300);font-size:1.15rem;line-height:1.65;margin-bottom:2.25rem;max-width:1020px}
@@ -133,6 +134,13 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
 .service-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:2.25rem 1.75rem;transition:var(--transition);display:flex;flex-direction:column;height:100%}
 .service-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:var(--shadow-md)}
+.service-card--visual{padding:0;overflow:hidden;border:1px solid var(--gray-200)}
+.service-card__thumb{width:100%;height:200px;overflow:hidden;position:relative;background:var(--gray-100)}
+.service-card__thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.service-card--visual:hover .service-card__thumb img{transform:scale(1.05)}
+.service-card__content{padding:1.75rem 1.5rem;display:flex;flex-direction:column;flex-grow:1}
+.service-card__content h3{color:var(--navy);margin-bottom:.75rem;font-size:1.2rem}
+.service-card__content p{flex-grow:1;margin-bottom:1.25rem;font-size:.95rem;color:var(--gray-600);line-height:1.6}
 .card-icon{width:54px;height:54px;background:var(--gray-100);color:var(--accent);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
 .card-icon svg{width:28px;height:28px}
 .service-card h3{color:var(--navy);margin-bottom:.75rem;font-size:1.25rem}

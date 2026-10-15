@@ -69,8 +69,8 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:92px}
 .logo-link{display:flex;align-items:center;padding-right:1rem;flex-shrink:0}
 .site-logo-img{width:180px !important; height:auto !important; display:block; flex-shrink:0;}
-.site-nav{display:flex;align-items:center;gap:.95rem}
-.nav-link{font-family:var(--font-head);font-weight:600;font-size:.835rem;letter-spacing:.01em;text-transform:none;color:var(--navy);padding:.75rem 0;position:relative;display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap}
+.site-nav{display:flex;align-items:center;gap:1.45rem}
+.nav-link{font-family:var(--font-head);font-weight:600;font-size:.835rem;letter-spacing:.01em;text-transform:none;color:var(--navy);padding:.75rem .2rem;position:relative;display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap}
 .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent);transition:var(--transition)}
 .nav-link:hover::after,.nav-link.active::after{width:100%}
 .nav-link.active{color:var(--accent)}

@@ -114,7 +114,7 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 
 /* Hero Component - Balanced Width & Side Breathing Room */
 .hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--blue-slate) 100%);color:var(--white);padding-block:5.5rem 4.5rem;position:relative}
-.hero--home{background:linear-gradient(135deg,rgba(6,20,38,.92) 0%,rgba(10,30,58,.86) 55%,rgba(28,57,94,.82) 100%),url('../images/home/hero-excell.jpg') center/cover no-repeat;padding-block:6.5rem 5.5rem}
+.hero--home{background:linear-gradient(135deg,rgba(6,20,38,.92) 0%,rgba(10,30,58,.86) 55%,rgba(28,57,94,.82) 100%),url('../images/home/hero-excell.jpg') center/cover no-repeat;padding-block:clamp(3.5rem,7vh,6.5rem) clamp(3rem,5.5vh,5.5rem)}
 .hero-content{max-width:1060px;position:relative;z-index:1}
 .hero h1{color:var(--white);margin-bottom:1.5rem;max-width:1000px}
 .hero p,

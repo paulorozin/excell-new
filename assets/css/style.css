@@ -302,6 +302,14 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
   overflow: hidden;
 }
 
+.hero--home {
+  min-height: auto;
+  padding-block: clamp(3.5rem, 7vh, 6.5rem) clamp(3rem, 5.5vh, 5.5rem);
+  background:
+    linear-gradient(135deg, rgba(9,22,41,.92) 0%, rgba(13,31,60,.86) 55%, rgba(26,58,107,.82) 100%),
+    url('../images/home/hero-excell.jpg') center / cover no-repeat;
+}
+
 .hero::before {
   content: '';
   position: absolute;

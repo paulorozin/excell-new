@@ -96,39 +96,50 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const nome = (document.getElementById('nome') || {}).value || '';
-      const empresa = (document.getElementById('empresa') || {}).value || '';
-      const email = (document.getElementById('email') || {}).value || '';
-      const telefone = (document.getElementById('telefone') || {}).value || '';
+      const nomeInput = document.getElementById('nome');
+      const empresaInput = document.getElementById('empresa');
+      const emailInput = document.getElementById('email');
+      const telefoneInput = document.getElementById('telefone');
       const assuntoSelect = document.getElementById('assunto');
-      const assunto = assuntoSelect && assuntoSelect.options[assuntoSelect.selectedIndex] ? assuntoSelect.options[assuntoSelect.selectedIndex].text : '';
-      const mensagem = (document.getElementById('mensagem') || {}).value || '';
+      const mensagemInput = document.getElementById('mensagem');
 
-      if (!nome || !email || !telefone || !mensagem) {
-        alert('Por favor, preencha todos os campos obrigatórios (*).');
+      const nome = nomeInput ? nomeInput.value.trim() : '';
+      const empresa = empresaInput ? empresaInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const telefone = telefoneInput ? telefoneInput.value.trim() : '';
+      const assunto = assuntoSelect && assuntoSelect.value
+        ? assuntoSelect.options[assuntoSelect.selectedIndex].text
+        : '';
+      const mensagem = mensagemInput ? mensagemInput.value.trim() : '';
+
+      if (!nome || !email || !telefone || !assunto || !mensagem) {
+        alert('Por favor, preencha todos os campos obrigatórios (*), incluindo a área de interesse.');
         return;
       }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Informe um endereço de e-mail válido.');
+        if (emailInput) emailInput.focus();
+        return;
+      }
+
+      const text = `Olá! Gostaria de uma avaliação técnica da EXCELL Engenharia.\n\n*Nome:* ${nome}\n*Empresa:* ${empresa || 'Não informada'}\n*E-mail:* ${email}\n*Telefone:* ${telefone}\n*Área:* ${assunto}\n*Mensagem:* ${mensagem}`;
+      const whatsappUrl = `https://wa.me/554320181300?text=${encodeURIComponent(text)}`;
+
+      // Abrir diretamente no evento de envio reduz o risco de bloqueio de pop-up.
+      window.open(whatsappUrl, '_blank');
 
       const btn = form.querySelector('button[type="submit"]');
       if (btn) {
         const originalText = btn.textContent;
-        btn.textContent = 'Abrindo atendimento via WhatsApp...';
+        btn.textContent = 'Mensagem preparada para o WhatsApp';
         btn.disabled = true;
-
-        const text = `Olá! Gostaria de uma avaliação técnica da EXCELL Engenharia.\n\n*Nome:* ${nome}\n*Empresa:* ${empresa || 'Não informada'}\n*E-mail:* ${email}\n*Telefone:* ${telefone}\n*Área:* ${assunto}\n*Mensagem:* ${mensagem}`;
-        const whatsappUrl = `https://wa.me/554320181300?text=${encodeURIComponent(text)}`;
-
-        setTimeout(() => {
-          window.open(whatsappUrl, '_blank');
-          btn.textContent = '✓ Redirecionado para o WhatsApp!';
-          btn.style.backgroundColor = '#167A3C';
-          setTimeout(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-            btn.style.backgroundColor = '';
-            form.reset();
-          }, 3000);
-        }, 600);
+        // Mantém os dados no formulário para o caso de a nova aba não abrir.
+        window.setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }, 2500);
       }
     });
   }

@@ -128,7 +128,12 @@
       const whatsappUrl = `https://wa.me/554320181300?text=${encodeURIComponent(text)}`;
 
       // Abrir diretamente no evento de envio reduz o risco de bloqueio de pop-up.
-      window.open(whatsappUrl, '_blank');
+      const whatsappWindow = window.open(whatsappUrl, '_blank');
+      if (!whatsappWindow) {
+        alert('O navegador bloqueou a abertura do WhatsApp. Permita pop-ups e tente novamente. Os dados foram mantidos no formulário.');
+        return;
+      }
+      whatsappWindow.opener = null;
 
       const btn = form.querySelector('button[type="submit"]');
       if (btn) {

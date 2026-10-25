@@ -157,7 +157,7 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 .blog-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:2.5rem}
 .blog-filter-btn{background:var(--gray-100);color:var(--navy);border:1px solid var(--gray-300);padding:.6rem 1.25rem;border-radius:30px;font-size:.875rem;font-weight:600;font-family:var(--font-head);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:.4rem}
 .blog-filter-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy);transform:translateY(-2px)}
-.blog-filter-btn.active{background:var(--accent);color:var(--white);border-color:var(--accent);box-shadow:0 4px 12px rgba(255,95,0,.3)}
+.blog-filter-btn.active,.blog-filter-btn[aria-selected=true]{background:var(--accent);color:var(--white);border-color:var(--accent);box-shadow:0 4px 12px rgba(255,95,0,.3)}
 .blog-filter-btn .count{display:inline-block;background:rgba(0,0,0,.08);padding:.1rem .45rem;border-radius:12px;font-size:.75rem}
 .blog-filter-btn.active .count{background:rgba(255,255,255,.25);color:var(--white)}
 

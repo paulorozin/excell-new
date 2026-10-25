@@ -130,8 +130,8 @@
     <p>No cabeçalho do pacote IPv4, o campo *Type of Service (ToS)* é utilizado pelo protocolo DiffServ (RFC 2474) para definir o nível de prioridade do tráfego:</p>
 
     <ul>
-      <li><strong>EF (Expedited Forwarding - DSCP 46 / Valor Binário `101110`):</strong> Reservado exclusivamente para os pacotes de mídia RTP contendo o áudio comprimido da chamada. Garante filas de prioridade estrita (*Strict Priority Queuing*) com o menor atraso e *jitter* possíveis;</li>
-      <li><strong>CS3 / AF31 (DSCP 24 ou 26):</strong> Atribuído às mensagens de controle de sinalização SIP (`INVITE`, `BYE`, `REGISTER`). Garante que a chamada seja completada e encerrada rapidamente sem perdas de pacotes de controle.</li>
+      <li><strong>EF (Expedited Forwarding - DSCP 46 / Valor Binário `101110`):</strong> Reservado exclusivamente para os pacotes de mídia RTP contendo o áudio comprimido da chamada. pode ser usado para classificar o tráfego de mídia e priorizá-lo em equipamentos configurados para QoS; o resultado depende da rede, dos equipamentos e das políticas aplicadas;</li>
+      <li><strong>CS3 / AF31 (DSCP 24 ou 26):</strong> Atribuído às mensagens de controle de sinalização SIP (`INVITE`, `BYE`, `REGISTER`). pode ajudar a priorizar mensagens de sinalização quando a rede e os equipamentos aplicam corretamente as políticas de QoS; isso não garante estabelecimento de chamadas nem elimina perdas;</li>
     </ul>
 
     <h3>Marcação de Camada 2 (IEEE 802.1p / CoS - Class of Service):</h3>

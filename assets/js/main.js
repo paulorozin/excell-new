@@ -163,9 +163,11 @@
         filterButtons.forEach(b => {
           b.classList.remove('active');
           b.setAttribute('aria-pressed', 'false');
+          b.setAttribute('aria-selected', 'false');
         });
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-selected', 'true');
 
         blogCards.forEach(card => {
           const cardCat = card.getAttribute('data-category');

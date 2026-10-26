@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gravação de Chamadas Telefônicas Corporativas e Conformidade com a LGPD | EXCELL Engenharia</title>
-  <meta name="description" content="Guia legal e técnico sobre gravação de voz corporativa sob a LGPD (Lei 13.709/18): bases legais, notificação na URA, armazenamento criptografado AES-256, prazos de guarda e ANPD." />
-  <meta name="keywords" content="gravacao de chamadas lgpd, lei 13709 2018 voz, base legal interesse legitimo, decreto sac 11034 2022, armazenamento criptografado aes 256, anpd ripd" />
+  <meta name="description" content="Guia técnico sobre gravação de chamadas corporativas, bases legais, transparência, segurança da informação e retenção de dados à luz da LGPD." />
+  <meta name="keywords" content="gravação de chamadas, LGPD, Lei 13.709/2018, segurança da informação, retenção de gravações, SAC, ANPD" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://excellengenharia.com.br/blog/telecom-gravacao-lgpd.html" />
   <meta property="og:title" content="Gravação de Chamadas Telefônicas Corporativas e Conformidade com a LGPD" />
-  <meta property="og:description" content="Entenda os requisitos legais e de engenharia de segurança para gravar chamadas telefônicas em conformidade total com a Lei Geral de Proteção de Dados." />
+  <meta property="og:description" content="Entenda pontos legais e técnicos para avaliar gravações telefônicas, proteção de dados e controles de segurança conforme a LGPD." />
   <meta property="og:type" content="article" />
   <link rel="icon" type="image/svg+xml" href="../assets/images/logo-excell.png" />
   <link rel="stylesheet" href="../assets/css/style.min.css" />
@@ -127,7 +127,7 @@
     <p>Gravar uma chamada sem se enquadrar em uma das bases legais previstas na legislação constitui tratamento ilícito de dados pessoais. As empresas devem mapear a finalidade da gravação para vinculá-la à hipótese adequada:</p>
 
     <ul>
-      <li><strong>Cumprimento de Obrigação Legal ou Regulatória (Art. 7º, II):</strong> Aplicável quando normas setoriais exigem expressamente a gravação de voz. Exemplos incluem o <strong>Decreto do SAC (Decreto nº 11.034/2022)</strong>, regulamentações do Banco Central (Bacen) para instituições financeiras e normas da Anatel para serviços de telecomunicações;</li>
+       <li><strong>Cumprimento de obrigação legal ou regulatória (Art. 7º, II):</strong> Pode ser aplicável quando uma norma pertinente exigir o registro. Para o Serviço de Atendimento ao Consumidor (SAC), consulte o <strong>Decreto nº 13.135/2026</strong>, publicado em 13 de outubro de 2026, observando seu âmbito de aplicação e a data de entrada em vigor, além das regras específicas do setor;</li>
       <li><strong>Execução de Contrato (Art. 7º, V):</strong> Gravações utilizadas para formalização de vendas por telefone, contratação de serviços ou alteração de planos comerciais a pedido do titular dos dados;</li>
       <li><strong>Legítimo Interesse do Controlador (Art. 7º, IX):</strong> Utilizado em centrais de atendimento convencionais para fins de monitoramento de qualidade, treinamento de colaboradores e segurança da informação, exigindo a realização prévia de um Teste de Proporcionalidade (*LIA - Legitimate Interest Assessment*);</li>
       <li><strong>Consentimento do Titular (Art. 7º, I):</strong> Aplicável em situações específicas onde o titular concorda expressamente com a gravação para finalidades secundárias (ex.: pesquisas de mercado).</li>
@@ -146,14 +146,14 @@
 
     <p>Se a chamada for originada de forma ativa pela empresa (*outbound calling*), o agente de atendimento deve verbalizar a notificação de gravação nos primeiros segundos do contato, obtendo a confirmação do interlocutor.</p>
 
-    <h2>3. Arquitetura de Armazenamento Seguro e Criptografia AES-256</h2>
-    <p>Armazenar arquivos de áudio em pastas compartilhadas sem restrição de acesso ou em servidores sem criptografia é uma infração grave à LGPD. A EXCELL Engenharia projeta a camada de gravação do PABX em Nuvem segundo os princípios de *Privacy by Design* e *Privacy by Default*:</p>
+     <h2>3. Armazenamento, transmissão e controles de segurança</h2>
+     <p>Arquivos de áudio devem receber proteção compatível com os riscos e as finalidades do tratamento. Ao avaliar uma solução, verifique os controles de acesso, a proteção dos dados armazenados e transmitidos e as responsabilidades do fornecedor, sem presumir que todos os recursos estejam presentes por padrão:</p>
 
     <ul>
-      <li><strong>Criptografia em Repouso (*Encryption at Rest*):</strong> Os arquivos de mídia (em formatos WAV, MP3 ou OGGS) são automaticamente criptografados no momento da gravação utilizando a cifra simétrica <strong>AES-256 (Advanced Encryption Standard)</strong>;</li>
-      <li><strong>Criptografia em Trânsito (*Encryption in Transit*):</strong> A transferência dos arquivos de áudio do servidor de comutação para o repositório de backup é realizada via protocolos seguros **TLS 1.3** ou **HTTPS/SFTP**;</li>
-      <li><strong>Controle de Acesso Baseado em Papéis (RBAC):</strong> Apenas auditores de qualidade e gestores autorizados com autenticação de múltiplos fatores (MFA) possuem permissão para reproduzir ou baixar as gravações;</li>
-      <li><strong>Logs de Auditoria Inalteráveis:</strong> Toda tentativa de acesso, visualização, reprodução ou exportação de um arquivo de áudio gera um registro de log imutável contendo o IP, data, hora e ID do usuário.</li>
+       <li><strong>Criptografia em repouso:</strong> Verifique se a plataforma e o serviço contratado criptografam os arquivos armazenados, qual algoritmo é utilizado, como as chaves são gerenciadas e se essa proteção está habilitada no ambiente;</li>
+       <li><strong>Proteção em trânsito:</strong> Confirme quais protocolos seguros são suportados e efetivamente utilizados na transferência de gravações e backups, conforme a arquitetura do fornecedor;</li>
+       <li><strong>Controle de acesso:</strong> Confirme como os perfis de usuário são definidos, quem pode reproduzir ou exportar gravações e se há suporte a autenticação multifator;</li>
+       <li><strong>Registros de auditoria:</strong> Verifique se a solução registra acessos e exportações, quais eventos são armazenados e por quanto tempo os registros ficam disponíveis.</li>
     </ul>
 
     <h2>4. Prazos de Retenção e Ciclo de Vida dos Arquivos de Áudio</h2>
@@ -162,12 +162,12 @@
     <h3>Definição de Prazos de Guarda Conforme a Legislação Vigente:</h3>
 
     <ul>
-      <li><strong>Chamadas de SAC (Decreto nº 11.034/2022):</strong> Manutenção obrigatória pelo período mínimo de **90 dias**, prazo no qual o consumidor pode solicitar cópia integral da gravação;</li>
-      <li><strong>Chamadas Financeiras / Transacionais:</strong> Retenção pelo prazo de **5 anos** para instrução de eventuais demandas judiciais comerciais ou comprovação perante órgãos reguladores (Bacen / CVM);</li>
-      <li><strong>Gravações de Monitoramento Interno de Qualidade:</strong> Expurgo automático em **30 a 60 dias**, período suficiente para a avaliação operacional da equipe.</li>
+       <li><strong>Chamadas de SAC:</strong> O Decreto nº 13.135/2026 prevê, em seu art. 19, a retenção mínima de 90 dias das gravações e mensagens abrangidas. O decreto entra em vigor 20 dias após a publicação e revoga o Decreto nº 11.034/2022; confirme a aplicação ao fornecedor e ao setor envolvidos;</li>
+       <li><strong>Chamadas financeiras ou transacionais:</strong> O prazo de guarda deve ser definido conforme a obrigação legal ou regulatória aplicável, a finalidade do tratamento e a política documentada da organização;</li>
+       <li><strong>Monitoramento interno de qualidade:</strong> Defina o prazo de retenção conforme a finalidade, a necessidade e os riscos, documentando a justificativa e os procedimentos de exclusão.</li>
     </ul>
 
-    <p>O PABX em Nuvem inclui um motor de política de retenção que executa a **eliminação segura e irreversível** dos arquivos de mídia e suas transcrições ao atingirem a data limite estipulada no inventário de dados.</p>
+     <p>Quando disponíveis na plataforma contratada, políticas de retenção e rotinas de exclusão devem ser configuradas, documentadas e testadas. A empresa deve verificar o alcance da exclusão, inclusive em cópias de segurança, e manter os registros necessários para demonstrar o procedimento.</p>
 
     <h2>5. Atendimento aos Direitos dos Titulares e o Relatório RIPD (DPIA)</h2>
     <p>O Artigo 18 da LGPD garante ao titular dos dados o direito de confirmar a existência de tratamento, acessar seus dados e solicitar a eliminação de informações desnecessárias. A infraestrutura de gravação deve viabilizar a localização rápida de uma conversa específica por meio da busca de registros por CPF, número de telefone ou data.</p>
@@ -175,12 +175,12 @@
     <p>Quando a gravação for realizada com base no Legítimo Interesse do Controlador, a ANPD orienta a elaboração do <strong>Relatório de Impacto à Proteção de Dados Pessoais (RIPD / DPIA)</strong>. Esse documento técnico descreve os processos de tratamento de voz, avalia os riscos de vazamento e detalha as medidas de segurança cibernética adotadas para mitigar incidentes.</p>
 
     <h2>Conclusão</h2>
-    <p>Gravar chamadas telefônicas em conformidade com a LGPD requer o alinhamento rigoroso entre as diretrizes jurídicas da empresa e a engenharia de sistemas de PABX. A EXCELL Engenharia fornece plataformas de PABX em Nuvem equipadas com criptografia nativa, aviso automático de URA, auditoria rigorosa de acessos e expurgo programado de mídias, garantindo total segurança jurídica e tecnológica.</p>
+     <p>A gravação de chamadas exige alinhamento entre finalidade, base legal, transparência, controle de acesso, retenção e segurança da informação. Os recursos disponíveis variam conforme a plataforma, o plano contratado e a configuração. Antes da implantação, a EXCELL pode ajudar a levantar os requisitos e verificar com os fornecedores quais funcionalidades são efetivamente suportadas, sem substituir a avaliação jurídica do cliente.</p>
   </div>
   <div class="cta-section">
     <div class="container">
       <h2>Adeque o Sistema de Gravação de Voz da sua Empresa à LGPD</h2>
-      <p>Entre em contato com os especialistas em telecomunicações e conformidade da EXCELL Engenharia para estruturar um sistema de gravação de chamadas totalmente auditável e criptografado.</p>
+       <p>Entre em contato com a EXCELL para avaliar os requisitos de gravação de chamadas e verificar os recursos de segurança, acesso e retenção disponíveis na solução pretendida.</p>
       <div class="cta-actions">
         <a href="../contato.html" class="btn btn-primary">Fale com um Especialista</a>
         <a href="https://wa.me/554320181300" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp (43) 2018-1300</a>

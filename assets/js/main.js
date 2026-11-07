@@ -68,6 +68,7 @@
 
   // 3. Scroll Reveal Animations (IntersectionObserver)
   function initScrollAnimations() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     if (!('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {

@@ -233,3 +233,14 @@ textarea.form-control{min-height:140px;resize:vertical}
 .telecom-visual figcaption{padding:.9rem 1.15rem;color:var(--gray-600);font-size:.9rem;line-height:1.5}
 @media(max-width:920px){.telecom-intro__grid{gap:2rem}.telecom-visual{max-width:680px;margin-inline:auto;width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Telecom services: organized capability cards */
+.telecom-capabilities{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.15rem}
+.telecom-capability{position:relative;padding:1.5rem 1.35rem 1.35rem;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);min-height:205px;transition:var(--transition)}
+.telecom-capability:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(255,95,0,.45)}
+.telecom-capability__check{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;margin-bottom:1rem;border-radius:50%;background:rgba(255,95,0,.1);color:var(--accent);font-size:1rem;font-weight:800}
+.telecom-capability h3{font-size:1.08rem;line-height:1.35;margin-bottom:.6rem}
+.telecom-capability p{font-size:.92rem;line-height:1.55;margin-bottom:0}
+.telecom-visual img{aspect-ratio:16/9;object-fit:cover}
+@media(max-width:1050px){.telecom-capabilities{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.telecom-capabilities{grid-template-columns:1fr}.telecom-capability{min-height:0;padding:1.25rem}}

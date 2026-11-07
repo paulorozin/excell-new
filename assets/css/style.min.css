@@ -224,3 +224,12 @@ textarea.form-control{min-height:140px;resize:vertical}
   .service-card{padding:1.75rem 1.25rem}
   .grid{gap:1.5rem}
 }
+
+/* Telecom page visual refinement and reduced-motion accessibility */
+.telecom-intro__grid{align-items:center;gap:3rem}
+.telecom-intro__copy{max-width:62ch}
+.telecom-visual{margin:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--gray-100);box-shadow:var(--shadow-md)}
+.telecom-visual img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.telecom-visual figcaption{padding:.9rem 1.15rem;color:var(--gray-600);font-size:.9rem;line-height:1.5}
+@media(max-width:920px){.telecom-intro__grid{gap:2rem}.telecom-visual{max-width:680px;margin-inline:auto;width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

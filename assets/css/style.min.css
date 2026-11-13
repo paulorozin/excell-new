@@ -265,8 +265,10 @@ textarea.form-control{min-height:140px;resize:vertical}
   .telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:auto;width:100%;justify-self:stretch}
 }
 
-/* Laudo ICMS: segmentos em duas colunas, com o quinto item centralizado */
-.icms-segments-grid>div:nth-child(5){grid-column:1/-1;width:calc(50% - 1.5rem);justify-self:center}
-.icms-segments-grid>div h3{color:var(--primary);font-weight:700;line-height:1.35;margin-bottom:.55rem}
-.icms-segments-grid>div p{color:var(--gray-600);line-height:1.6;margin-bottom:0}
-@media(max-width:600px){.icms-segments-grid>div:nth-child(5){grid-column:auto;width:100%;justify-self:stretch}}
+/* Laudo ICMS: segmentos em lista editorial com hierarquia e leitura fluida */
+.icms-segments-list{max-width:1000px;margin-inline:auto}
+.icms-segment-row{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(0,1.6fr);align-items:center;gap:2rem;padding:1.35rem 0;border-bottom:1px solid var(--gray-200)}
+.icms-segment-row:first-child{border-top:1px solid var(--gray-200)}
+.icms-segment-row h3{color:var(--navy);font-size:1.08rem;line-height:1.4;margin:0}
+.icms-segment-row p{color:var(--gray-600);line-height:1.6;margin:0}
+@media(max-width:600px){.icms-segment-row{grid-template-columns:1fr;gap:.35rem;padding:1.1rem 0}.icms-segment-row h3{font-size:1.02rem}}

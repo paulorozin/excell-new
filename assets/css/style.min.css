@@ -248,3 +248,4 @@ textarea.form-control{min-height:140px;resize:vertical}
 /* ICMS: four scope cards in a balanced 2x2 layout */
 .telecom-capabilities--two-col{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1000px;margin-inline:auto}
 @media(max-width:600px){.telecom-capabilities--two-col{grid-template-columns:1fr}}
+.icms-segments-grid{max-width:1000px;margin-inline:auto;column-gap:3rem;row-gap:2.1rem}

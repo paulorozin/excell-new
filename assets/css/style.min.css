@@ -264,3 +264,9 @@ textarea.form-control{min-height:140px;resize:vertical}
   .telecom-capabilities--five{grid-template-columns:1fr}
   .telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:auto;width:100%;justify-self:stretch}
 }
+
+/* Laudo ICMS: segmentos em duas colunas, com o quinto item centralizado */
+.icms-segments-grid>div:nth-child(5){grid-column:1/-1;width:calc(50% - 1.5rem);justify-self:center}
+.icms-segments-grid>div h3{color:var(--primary);font-weight:700;line-height:1.35;margin-bottom:.55rem}
+.icms-segments-grid>div p{color:var(--gray-600);line-height:1.6;margin-bottom:0}
+@media(max-width:600px){.icms-segments-grid>div:nth-child(5){grid-column:auto;width:100%;justify-self:stretch}}

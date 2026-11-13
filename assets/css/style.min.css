@@ -272,3 +272,7 @@ textarea.form-control{min-height:140px;resize:vertical}
 .icms-segment-row h3{color:var(--navy);font-size:1.08rem;line-height:1.4;margin:0}
 .icms-segment-row p{color:var(--gray-600);line-height:1.6;margin:0}
 @media(max-width:600px){.icms-segment-row{grid-template-columns:1fr;gap:.35rem;padding:1.1rem 0}.icms-segment-row h3{font-size:1.02rem}}
+
+/* Stage 1: preserve visual service-card spacing on small screens and support keyboard dropdown access */
+@media(max-width:600px){.service-card--visual{padding:0}}
+@media(min-width:1201px){.nav-has-dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}.nav-has-dropdown:focus-within .nav-link .arrow{transform:rotate(180deg)}}

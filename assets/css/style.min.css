@@ -249,3 +249,18 @@ textarea.form-control{min-height:140px;resize:vertical}
 .telecom-capabilities--two-col{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1000px;margin-inline:auto}
 @media(max-width:600px){.telecom-capabilities--two-col{grid-template-columns:1fr}}
 .icms-segments-grid{max-width:1000px;margin-inline:auto;column-gap:3rem;row-gap:2.1rem}
+
+/* Assistente Técnico: cinco serviços em composição 3 + 2 centralizada */
+.telecom-capabilities--five{grid-template-columns:repeat(6,minmax(0,1fr))}
+.telecom-capabilities--five .telecom-capability{grid-column:span 2}
+.telecom-capabilities--five .telecom-capability:nth-child(4){grid-column:2/span 2}
+.telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:4/span 2}
+@media(max-width:900px){
+  .telecom-capabilities--five{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .telecom-capabilities--five .telecom-capability{grid-column:auto}
+  .telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:1/-1;width:calc(50% - .7rem);justify-self:center}
+}
+@media(max-width:600px){
+  .telecom-capabilities--five{grid-template-columns:1fr}
+  .telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:auto;width:100%;justify-self:stretch}
+}

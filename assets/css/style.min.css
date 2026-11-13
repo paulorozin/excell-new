@@ -244,3 +244,31 @@ textarea.form-control{min-height:140px;resize:vertical}
 .telecom-visual img{aspect-ratio:16/9;object-fit:cover}
 @media(max-width:900px){.telecom-capabilities{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.telecom-capabilities{grid-template-columns:1fr}.telecom-capability{min-height:0;padding:1.25rem}}
+
+/* ICMS: four scope cards in a balanced 2x2 layout */
+.telecom-capabilities--two-col{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1000px;margin-inline:auto}
+@media(max-width:600px){.telecom-capabilities--two-col{grid-template-columns:1fr}}
+.icms-segments-grid{max-width:1000px;margin-inline:auto;column-gap:3rem;row-gap:2.1rem}
+
+/* Assistente Técnico: cinco serviços em composição 3 + 2 centralizada */
+.telecom-capabilities--five{grid-template-columns:repeat(6,minmax(0,1fr))}
+.telecom-capabilities--five .telecom-capability{grid-column:span 2}
+.telecom-capabilities--five .telecom-capability:nth-child(4){grid-column:2/span 2}
+.telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:4/span 2}
+@media(max-width:900px){
+  .telecom-capabilities--five{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .telecom-capabilities--five .telecom-capability{grid-column:auto}
+  .telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:1/-1;width:calc(50% - .7rem);justify-self:center}
+}
+@media(max-width:600px){
+  .telecom-capabilities--five{grid-template-columns:1fr}
+  .telecom-capabilities--five .telecom-capability:nth-child(5){grid-column:auto;width:100%;justify-self:stretch}
+}
+
+/* Laudo ICMS: segmentos em lista editorial com hierarquia e leitura fluida */
+.icms-segments-list{max-width:1000px;margin-inline:auto}
+.icms-segment-row{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(0,1.6fr);align-items:center;gap:2rem;padding:1.35rem 0;border-bottom:1px solid var(--gray-200)}
+.icms-segment-row:first-child{border-top:1px solid var(--gray-200)}
+.icms-segment-row h3{color:var(--navy);font-size:1.08rem;line-height:1.4;margin:0}
+.icms-segment-row p{color:var(--gray-600);line-height:1.6;margin:0}
+@media(max-width:600px){.icms-segment-row{grid-template-columns:1fr;gap:.35rem;padding:1.1rem 0}.icms-segment-row h3{font-size:1.02rem}}

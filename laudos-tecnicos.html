@@ -88,8 +88,6 @@
       <nav class="site-nav" aria-label="Navegação Principal">
         <a href="index.html" class="nav-link">Home</a>
         <a href="a-excell.html" class="nav-link">EXCELL</a>
-
-        <!-- Dropdown Telecomunicações -->
         <div class="nav-item nav-has-dropdown">
           <a href="telecomunicacoes.html" class="nav-link">Telecomunicações <span class="arrow">▾</span></a>
           <div class="dropdown-menu">
@@ -99,18 +97,14 @@
             <a href="telecomunicacoes.html#manutencao-pabx">Manutenção de PABX</a>
           </div>
         </div>
-
         <a href="assistente-tecnico.html" class="nav-link">Assistente Técnico</a>
         <a href="laudos-tecnicos.html" class="nav-link active">Laudo para Crédito de ICMS</a>
-
         <a href="blog.html" class="nav-link">Blog</a>
-
         <a href="contato.html" class="nav-cta">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Fale com um Especialista
         </a>
       </nav>
-
       <button class="hamburger" id="hamburger" aria-label="Abrir Menu de Navegação" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -120,12 +114,11 @@
   <!-- Navigation Mobile Off-Canvas Drawer -->
   <nav class="mobile-nav" id="mobile-nav" aria-label="Menu Celular">
     <a href="contato.html" class="mobile-cta">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14c1.1 0 2 .9 2 2z"/></svg>
       Fale com um Especialista
     </a>
     <a href="index.html">Home</a>
     <a href="a-excell.html">EXCELL</a>
-
     <div class="mobile-dropdown">
       <div class="mobile-dropdown-title">Telecomunicações <span>▾</span></div>
       <div class="mobile-dropdown-items">
@@ -136,11 +129,8 @@
         <a href="telecomunicacoes.html#manutencao-pabx">Manutenção de PABX</a>
       </div>
     </div>
-
     <a href="assistente-tecnico.html">Assistente Técnico</a>
-
     <a href="laudos-tecnicos.html" class="active">Laudo para Crédito de ICMS</a>
-
     <a href="blog.html">Blog</a>
     <a href="contato.html">Contato</a>
   </nav>
@@ -159,60 +149,84 @@
     <!-- Apresentação do Laudo de ICMS -->
     <section class="section" id="icms">
       <div class="container">
-        <div class="two-col">
-          <div>
+        <div class="two-col telecom-intro__grid">
+          <div class="telecom-intro__copy">
             <span class="section-label">Análise Técnica para a Área Fiscal</span>
             <h2>Aproveitamento de ICMS sobre Energia Elétrica</h2>
             <div class="divider"></div>
-            <p>A legislação tributária prevê hipóteses de aproveitamento de créditos de ICMS sobre a energia elétrica consumida no processo de industrialização. A identificação da parcela elegível exige análise das características da operação industrial e dos critérios fiscais aplicáveis.</p>
-            <p>O trabalho registra o inventário das cargas, a classificação das áreas e os critérios técnicos utilizados para estimar a parcela de energia associada à produção, considerando as características da operação industrial.</p>
+            <p>A legislação tributária permite o aproveitamento de créditos de ICMS sobre a energia elétrica utilizada no processo de industrialização, desde que atendidos os critérios legais. A identificação da parcela elegível exige análise das características da operação industrial e dos critérios fiscais aplicáveis.</p>
+            <p>O levantamento contempla a identificação e o inventário das cargas elétricas, considerando suas características, aplicação e regime de funcionamento. A partir dessas informações, são classificados os consumos relacionados ao processo de industrialização e aqueles destinados a atividades não produtivas, com critérios técnicos documentados e memória de cálculo.</p>
           </div>
-          <div style="background: var(--navy); color: var(--white); padding: 2.5rem; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
-            <h3 style="color: var(--white); margin-bottom: 1.25rem;">O que o laudo proporciona</h3>
-            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--white); list-style: none; padding-left: 0; margin: 0; font-size: 1rem; line-height: 1.5;">
-              <li style="display: flex; gap: .75rem; align-items: flex-start;"><span style="color: var(--white); flex-shrink: 0; font-weight: 700;">✔</span><span>Identificação técnica da parcela de energia associada ao processo produtivo.</span></li>
-              <li style="display: flex; gap: .75rem; align-items: flex-start;"><span style="color: var(--white); flex-shrink: 0; font-weight: 700;">✔</span><span>Subsídios para a apuração dos créditos de ICMS pela área contábil e fiscal.</span></li>
-              <li style="display: flex; gap: .75rem; align-items: flex-start;"><span style="color: var(--white); flex-shrink: 0; font-weight: 700;">✔</span><span>Análise das cargas elétricas e dos setores produtivos e não produtivos.</span></li>
-              <li style="display: flex; gap: .75rem; align-items: flex-start;"><span style="color: var(--white); flex-shrink: 0; font-weight: 700;">✔</span><span>Documentação técnica com responsabilidade profissional e emissão de ART.</span></li>
-            </ul>
-          </div>
+          <figure class="telecom-visual">
+            <img src="https://images.pexels.com/photos/33706880/pexels-photo-33706880.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Sala industrial com painéis elétricos de controle e distribuição" width="1400" height="927" loading="lazy" />
+            <figcaption>Infraestrutura elétrica industrial e sistemas de controle associados ao processo produtivo.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Quem pode se beneficiar & Legislação -->
-    <section class="section section--alt">
+    <!-- Escopo e Entregáveis do Laudo -->
+    <section class="section section--alt" id="escopo-laudo">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3.5rem;">
+          <span class="section-label">Escopo do Trabalho</span>
+          <h2>O que o levantamento técnico contempla</h2>
+          <div class="divider center"></div>
+          <p>O laudo organiza as informações da unidade industrial, documenta os critérios e as premissas adotados na classificação dos consumos e apresenta a memória de cálculo que fundamenta a estimativa da parcela de energia associada às atividades produtivas.</p>
+        </div>
+        <div class="telecom-capabilities telecom-capabilities--two-col">
+          <article class="telecom-capability">
+            <span class="telecom-capability__check" aria-hidden="true">✓</span>
+            <h3>Inventário das Cargas Elétricas</h3>
+            <p>Identificação e registro dos equipamentos, potências e características relevantes para a análise técnica.</p>
+          </article>
+          <article class="telecom-capability">
+            <span class="telecom-capability__check" aria-hidden="true">✓</span>
+            <h3>Classificação dos Setores e Áreas</h3>
+            <p>Organização das áreas da unidade industrial e identificação das atividades produtivas e não produtivas.</p>
+          </article>
+          <article class="telecom-capability">
+            <span class="telecom-capability__check" aria-hidden="true">✓</span>
+            <h3>Análise dos Usos da Energia</h3>
+            <p>Avaliação técnica das cargas e de sua relação com o processo de industrialização, conforme os critérios aplicáveis.</p>
+          </article>
+          <article class="telecom-capability">
+            <span class="telecom-capability__check" aria-hidden="true">✓</span>
+            <h3>Laudo e Responsabilidade Técnica</h3>
+            <p>Consolidação dos levantamentos, critérios e resultados em documento técnico, com emissão da respectiva ART.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segmentos Atendidos -->
+    <section class="section">
       <div class="container">
         <div class="text-center" style="margin-bottom: 3.5rem;">
           <span class="section-label">Segmentos Atendidos</span>
           <h2>Soluções para diferentes segmentos industriais</h2>
           <div class="divider center"></div>
-          <p>O levantamento técnico pode ser aplicado a diferentes processos industriais, conforme as características da planta e as particularidades de cada operação.</p>
+          <p style="max-width: 760px; margin-inline: auto;">O levantamento técnico pode ser aplicado a diferentes processos industriais, conforme as características da planta e as particularidades de cada operação.</p>
         </div>
-
-        <div class="grid grid-3">
-          <div class="service-card">
-            <h3>Indústrias Alimentícias e Frigoríficos</h3>
+        <div class="icms-segments-list">
+          <div class="icms-segment-row">
+            <h3>Alimentos e Frigoríficos</h3>
             <p>Processamento de alimentos, câmaras frigoríficas, sistemas de moagem e linhas de produção.</p>
           </div>
-
-          <div class="service-card">
-            <h3>Indústrias Metalúrgicas e Plásticas</h3>
+          <div class="icms-segment-row">
+            <h3>Metalurgia e Plásticos</h3>
             <p>Fornos, máquinas de usinagem, prensas, extrusoras e injetoras.</p>
           </div>
-
-          <div class="service-card">
-            <h3>Indústrias Químicas e Farmacêuticas</h3>
+          <div class="icms-segment-row">
+            <h3>Química e Farmacêutica</h3>
             <p>Misturadores, reatores, sistemas de secagem e equipamentos de produção e embalagem.</p>
           </div>
-
-          <div class="service-card">
-            <h3>Indústrias Têxteis, Papel e Celulose</h3>
+          <div class="icms-segment-row">
+            <h3>Têxtil, Papel e Celulose</h3>
             <p>Teares, equipamentos de fiação, calandras, prensas e máquinas de corte.</p>
           </div>
-
-          <div class="service-card">
-            <h3>Madeireiras e Moveleiras</h3>
+          <div class="icms-segment-row">
+            <h3>Indústria Moveleira</h3>
             <p>Serrarias, secadores, centros de usinagem e equipamentos de acabamento.</p>
           </div>
         </div>
@@ -220,14 +234,13 @@
     </section>
 
     <!-- Metodologia do Laudo -->
-    <section class="section">
+    <section class="section section--alt">
       <div class="container">
         <div class="text-center" style="margin-bottom: 3.5rem;">
           <span class="section-label">Metodologia Técnica</span>
           <h2>Como funciona o levantamento</h2>
           <div class="divider center"></div>
         </div>
-
         <div class="process-grid">
           <div class="process-step">
             <span class="step-num">1</span>

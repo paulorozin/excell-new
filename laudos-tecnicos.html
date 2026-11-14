@@ -25,27 +25,38 @@
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Laudo Técnico para Crédito de ICMS sobre Energia Elétrica",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "EXCELL Engenharia e Tecnologia",
-      "legalName": "Rozin & Lamounier Ltda.",
-      "telephone": "+55-43-2018-1300",
-      "email": "contato@excellengenharia.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Arapongas",
-        "addressRegion": "PR",
-        "addressCountry": "BR"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://excellengenharia.com.br/laudos-tecnicos.html#webpage",
+        "url": "https://excellengenharia.com.br/laudos-tecnicos.html",
+        "name": "Laudo Técnico para Crédito de ICMS sobre Energia Elétrica | EXCELL",
+        "isPartOf": {
+          "@id": "https://excellengenharia.com.br/#website"
+        },
+        "about": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "mainEntity": {
+          "@id": "https://excellengenharia.com.br/laudos-tecnicos.html#service"
+        },
+        "inLanguage": "pt-BR"
       },
-      "areaServed": "BR"
-    },
-    "serviceType": "Laudo técnico de engenharia elétrica para análise de crédito de ICMS",
-    "description": "Levantamento e classificação técnica de cargas e áreas industriais para identificar a parcela de energia associada ao processo produtivo e subsidiar a análise fiscal."
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Laudo Técnico para Crédito de ICMS sobre Energia Elétrica",
+        "provider": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "serviceType": "Laudo técnico de engenharia elétrica para análise de crédito de ICMS",
+        "description": "Levantamento e classificação técnica de cargas e áreas industriais para identificar a parcela de energia associada ao processo produtivo e subsidiar a análise fiscal.",
+        "@id": "https://excellengenharia.com.br/laudos-tecnicos.html#service"
+      }
+    ]
   }
   </script>
 </head>

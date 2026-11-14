@@ -19,20 +19,38 @@
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Blog Técnico EXCELL Engenharia e Tecnologia",
-    "url": "https://excellengenharia.com.br/blog.html",
-    "description": "Publicações e análises técnicas sobre PABX em Nuvem, Telecomunicações Corporativas, Perícias Extrajudiciais, Assistência Técnica e Laudos de ICMS.",
-    "publisher": {
-      "@type": "ProfessionalService",
-      "name": "EXCELL Engenharia e Tecnologia",
-      "legalName": "Rozin & Lamounier Ltda.",
-      "telephone": "+55-43-2018-1300",
-      "email": "contato@excellengenharia.com.br"
-    }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://excellengenharia.com.br/blog.html#webpage",
+        "url": "https://excellengenharia.com.br/blog.html",
+        "name": "Blog Técnico | EXCELL Engenharia e Tecnologia",
+        "isPartOf": {
+          "@id": "https://excellengenharia.com.br/#website"
+        },
+        "about": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "mainEntity": {
+          "@id": "https://excellengenharia.com.br/blog.html#blog"
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://excellengenharia.com.br/blog.html#blog",
+        "name": "Blog Técnico EXCELL Engenharia e Tecnologia",
+        "url": "https://excellengenharia.com.br/blog.html",
+        "description": "Artigos técnicos completos sobre PABX em Nuvem, Telefonia IP, Telecomunicações, Perícias Extrajudiciais, Assistência Técnica Processual e Laudos de ICMS.",
+        "publisher": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
+      }
+    ]
   }
   </script>
 </head>

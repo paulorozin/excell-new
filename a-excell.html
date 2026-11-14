@@ -25,25 +25,27 @@
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "Sobre a EXCELL Engenharia e Tecnologia",
-    "mainEntity": {
-      "@type": "ProfessionalService",
-      "name": "EXCELL Engenharia e Tecnologia",
-      "legalName": "Rozin & Lamounier Ltda.",
-      "telephone": "+55-43-2018-1300",
-      "email": "contato@excellengenharia.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Arapongas",
-        "addressRegion": "PR",
-        "addressCountry": "BR"
-      },
-      "areaServed": "BR"
-    }
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://excellengenharia.com.br/a-excell.html#webpage",
+        "url": "https://excellengenharia.com.br/a-excell.html",
+        "name": "A EXCELL | EXCELL Engenharia e Tecnologia",
+        "about": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://excellengenharia.com.br/#website"
+        }
+      }
+    ]
   }
   </script>
 </head>

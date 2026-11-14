@@ -25,31 +25,42 @@
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "PABX em Nuvem e Telecomunicações Corporativas",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "EXCELL Engenharia e Tecnologia",
-      "legalName": "Rozin & Lamounier Ltda.",
-      "telephone": "+55-43-2018-1300",
-      "email": "contato@excellengenharia.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Arapongas",
-        "addressRegion": "PR",
-        "addressCountry": "BR"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://excellengenharia.com.br/telecomunicacoes.html#webpage",
+        "url": "https://excellengenharia.com.br/telecomunicacoes.html",
+        "name": "PABX em Nuvem e Telefonia IP | EXCELL Engenharia e Tecnologia",
+        "isPartOf": {
+          "@id": "https://excellengenharia.com.br/#website"
+        },
+        "about": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "mainEntity": {
+          "@id": "https://excellengenharia.com.br/telecomunicacoes.html#service"
+        },
+        "inLanguage": "pt-BR"
       },
-      "areaServed": "BR"
-    },
-    "serviceType": "Telecomunicações Corporativas e Telefonia IP",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Brasil"
-    },
-    "description": "Projetos, implantação, configuração e manutenção de PABX em Nuvem, Telefonia IP, Troncos SIP, Comunicação Unificada e suporte a centrais telefônicas físicas."
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "PABX em Nuvem e Telecomunicações Corporativas",
+        "provider": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "serviceType": "Telecomunicações Corporativas e Telefonia IP",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "description": "Projetos, implantação, configuração e manutenção de PABX em Nuvem, Telefonia IP, Troncos SIP, Comunicação Unificada e suporte a centrais telefônicas físicas.",
+        "@id": "https://excellengenharia.com.br/telecomunicacoes.html#service"
+      }
+    ]
   }
   </script>
 </head>

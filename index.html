@@ -26,30 +26,61 @@
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "EXCELL Engenharia e Tecnologia",
-    "legalName": "Rozin & Lamounier Ltda.",
-    "url": "https://excellengenharia.com.br/",
-    "logo": "https://excellengenharia.com.br/assets/images/logo-excell.png",
-    "telephone": "+55-43-2018-1300",
-    "email": "contato@excellengenharia.com.br",
-    "taxID": "59.746.775/0001-53",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Arapongas",
-      "addressRegion": "PR",
-      "addressCountry": "BR"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Brasil"
-    },
-    "sameAs": [
-      "https://www.instagram.com/excell_engenharia",
-      "https://www.linkedin.com/company/excell-engenharia"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://excellengenharia.com.br/#organization",
+        "name": "EXCELL Engenharia e Tecnologia",
+        "legalName": "Rozin & Lamounier Ltda.",
+        "url": "https://excellengenharia.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://excellengenharia.com.br/assets/images/logo-excell.png"
+        },
+        "telephone": "+55-43-2018-1300",
+        "email": "contato@excellengenharia.com.br",
+        "taxID": "59.746.775/0001-53",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Arapongas",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "sameAs": [
+          "https://www.instagram.com/excell_engenharia",
+          "https://www.linkedin.com/company/excell-engenharia"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://excellengenharia.com.br/#website",
+        "url": "https://excellengenharia.com.br/",
+        "name": "EXCELL Engenharia e Tecnologia",
+        "publisher": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://excellengenharia.com.br/#webpage",
+        "url": "https://excellengenharia.com.br/",
+        "name": "EXCELL Engenharia e Tecnologia | Telecomunicações, Assistência Técnica e Laudos",
+        "about": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@id": "https://excellengenharia.com.br/#website"
+        }
+      }
     ]
   }
   </script>

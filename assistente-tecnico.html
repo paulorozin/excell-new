@@ -25,27 +25,38 @@
   <link rel="stylesheet" href="assets/css/style.min.css" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Assistência Técnica Judicial em Engenharia",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "EXCELL Engenharia e Tecnologia",
-      "legalName": "Rozin & Lamounier Ltda.",
-      "telephone": "+55-43-2018-1300",
-      "email": "contato@excellengenharia.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Arapongas",
-        "addressRegion": "PR",
-        "addressCountry": "BR"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://excellengenharia.com.br/assistente-tecnico.html#webpage",
+        "url": "https://excellengenharia.com.br/assistente-tecnico.html",
+        "name": "Assistência Técnica em Processos Judiciais | EXCELL Engenharia e Tecnologia",
+        "isPartOf": {
+          "@id": "https://excellengenharia.com.br/#website"
+        },
+        "about": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "mainEntity": {
+          "@id": "https://excellengenharia.com.br/assistente-tecnico.html#service"
+        },
+        "inLanguage": "pt-BR"
       },
-      "areaServed": "BR"
-    },
-    "serviceType": "Assistência Técnica Processual",
-    "description": "Assessoria técnica estratégica para advogados e empresas em perícias judiciais de engenharia elétrica e telecomunicações."
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Assistência Técnica Judicial em Engenharia",
+        "provider": {
+          "@id": "https://excellengenharia.com.br/#organization"
+        },
+        "serviceType": "Assistência Técnica Processual",
+        "description": "Assessoria técnica estratégica para advogados e empresas em perícias judiciais de engenharia elétrica e telecomunicações.",
+        "@id": "https://excellengenharia.com.br/assistente-tecnico.html#service"
+      }
+    ]
   }
   </script>
 </head>

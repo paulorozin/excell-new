@@ -276,3 +276,18 @@ textarea.form-control{min-height:140px;resize:vertical}
 /* Stage 1: preserve visual service-card spacing on small screens and support keyboard dropdown access */
 @media(max-width:600px){.service-card--visual{padding:0}}
 @media(min-width:1201px){.nav-has-dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}.nav-has-dropdown:focus-within .nav-link .arrow{transform:rotate(180deg)}}
+
+/* Mobile layout corrections: contact card, assistant services and navigation drawer */
+@media(max-width:1200px){
+  .telecom-capabilities.telecom-capabilities--five{grid-template-columns:minmax(0,1fr)!important;gap:1rem}
+  .telecom-capabilities--five>.telecom-capability,
+  .telecom-capabilities--five>.telecom-capability:nth-child(n){grid-column:1/-1!important;width:100%!important;max-width:100%;min-width:0;justify-self:stretch!important}
+  .mobile-nav{right:0!important;left:auto!important;box-sizing:border-box;width:min(340px,88vw);max-width:calc(100vw - 1rem);transform:translate3d(100%,0,0)}
+  .mobile-nav.open{transform:translate3d(0,0,0)}
+}
+@media(max-width:920px){
+  .contact-grid,.contact-grid>*{min-width:0;max-width:100%}
+  .contact-info-card{width:100%;min-width:0;max-width:100%;overflow-wrap:anywhere}
+  .contact-info-card h3,.contact-info-card p,.contact-info-card a{min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+  .contact-item>div{min-width:0;overflow-wrap:anywhere}
+}

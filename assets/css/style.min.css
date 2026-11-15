@@ -314,4 +314,4 @@ textarea.form-control{min-height:140px;resize:vertical}
 @media(max-width:760px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:.4rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-brand{grid-column:auto}.home-institutional-panel{padding:2rem 1.5rem}}
 /* Links contextuais no corpo dos artigos */
-.article-body a{color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;transition:color var(--transition)}.article-body a:hover{color:var(--accent)}.article-body a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.article-content a{color:var(--blue-slate);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;transition:color var(--transition)}.article-content a:hover{color:var(--accent)}.article-content a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}

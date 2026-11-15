@@ -1071,3 +1071,20 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
+
+/* Links contextuais no corpo dos artigos */
+.article-body a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color var(--transition);
+}
+.article-body a:hover {
+  color: var(--accent);
+}
+.article-body a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

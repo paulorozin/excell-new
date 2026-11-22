@@ -155,7 +155,7 @@
 <li><strong>Click-to-call:</strong> iniciar uma chamada telefônica a partir do CRM quando o PABX e o sistema comercial oferecerem essa função.</li>
 <li><strong>Histórico:</strong> registrar informações necessárias ao atendimento, respeitando finalidade, permissões e política de retenção.</li>
 </ul>
-<p>Uma integração entre mensageria e telefonia não significa que o áudio de uma chamada SIP trafegue pela API de mensagens. São serviços e fluxos distintos. Recursos de chamada do WhatsApp Business Platform também dependem de habilitação, disponibilidade e compatibilidade específicas.</p>
+<p>A Meta também documenta uma API específica para chamadas do WhatsApp Business e padrões de integração com infraestrutura VoIP, inclusive com possibilidade de conexão a uma infraestrutura SIP do lado da empresa. Esse cenário exige implementação própria e atendimento aos requisitos técnicos da Meta. Há uma restrição importante: a documentação da Meta proíbe que a rede telefônica pública comutada (PSTN) participe de qualquer trecho do fluxo dessas chamadas. Portanto, não se deve confundir essa integração com um tronco SIP convencional para originar ou terminar chamadas na rede pública.</p>
 <h2>3. Pontos que devem ser verificados no projeto</h2>
 <p>Antes de contratar ou desenvolver a integração, é recomendável documentar:</p>
 <ul>
@@ -185,6 +185,7 @@
     <h2 id="article-references-title">Referências técnicas e normativas</h2>
     <ul>
       <li><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/overview/" target="_blank" rel="noopener noreferrer">Meta for Developers — WhatsApp Business Platform</a></li>
+<li><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/calling/integration-patterns/" target="_blank" rel="noopener noreferrer">Meta — Integration Patterns for WhatsApp Business Calling</a></li>
 <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais</a></li>
     </ul>
   </section>

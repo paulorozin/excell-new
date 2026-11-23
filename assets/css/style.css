@@ -1171,3 +1171,28 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
 .blog-article .article-references li {
   text-align: left;
 }
+
+
+/* Padroniza a coluna final dos artigos: referências e chamada comercial */
+.blog-article .article-references {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.blog-article .cta-section > .container {
+  max-width: 760px;
+  text-align: left;
+}
+
+.blog-article .cta-section p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.blog-article .cta-section .cta-actions {
+  justify-content: flex-start;
+}

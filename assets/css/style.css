@@ -1162,3 +1162,12 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
     padding: 1.25rem 1.25rem 1.75rem;
   }
 }
+
+
+/* Alinhamento à esquerda das referências técnicas e normativas */
+.blog-article .article-references,
+.blog-article .article-references h2,
+.blog-article .article-references ul,
+.blog-article .article-references li {
+  text-align: left;
+}

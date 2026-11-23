@@ -1194,5 +1194,5 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
 }
 
 .blog-article .cta-section .cta-actions {
-  justify-content: flex-start;
+  justify-content: center;
 }

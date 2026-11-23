@@ -1202,3 +1202,22 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
+
+
+/* Ajuste fino dos espaçamentos finais dos artigos */
+.blog-article .article-body.container {
+  padding-bottom: 3rem;
+}
+.blog-article .cta-section {
+  margin-top: 2rem;
+  padding-bottom: 5.75rem;
+}
+@media (max-width: 600px) {
+  .blog-article .article-body.container {
+    padding-bottom: 2.25rem;
+  }
+  .blog-article .cta-section {
+    margin-top: 1.5rem;
+    padding-bottom: 5.25rem;
+  }
+}

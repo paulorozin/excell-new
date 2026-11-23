@@ -1208,7 +1208,7 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
 
 /* Ajuste fino dos espaçamentos finais dos artigos */
 .blog-article .article-body.container {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.25rem;
 }
 .blog-article .cta-section {
   margin-top: 2rem;
@@ -1216,7 +1216,7 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
 }
 @media (max-width: 600px) {
   .blog-article .article-body.container {
-    padding-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
   }
   .blog-article .cta-section {
     margin-top: 1.5rem;

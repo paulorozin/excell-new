@@ -1227,5 +1227,5 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
 
 /* Espaçamento sutil entre o texto e os botões da chamada */
 .blog-article .cta-section p {
-  margin-bottom: 2.65rem;
+  margin-bottom: 2.9rem;
 }

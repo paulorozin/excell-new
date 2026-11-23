@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gravação de chamadas nas empresas: cuidados com a LGPD | EXCELL Engenharia</title>
-  <meta name="description" content="Guia técnico sobre gravação de chamadas corporativas, bases legais, transparência, segurança da informação e retenção de dados à luz da LGPD." />
+  <meta name="description" content="Conheça os cuidados técnicos e de governança para gravação de chamadas: finalidade, bases legais, transparência, segurança e retenção conforme a LGPD." />
   <meta name="keywords" content="gravação de chamadas, LGPD, Lei 13.709/2018, segurança da informação, retenção de gravações, SAC, ANPD" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://excellengenharia.com.br/blog/telecom-gravacao-lgpd.html" />
   <meta property="og:title" content="Gravação de chamadas nas empresas: cuidados com a LGPD" />
-  <meta property="og:description" content="Entenda pontos legais e técnicos para avaliar gravações telefônicas, proteção de dados e controles de segurança conforme a LGPD." />
+  <meta property="og:description" content="Conheça os cuidados técnicos e de governança para gravação de chamadas: finalidade, bases legais, transparência, segurança e retenção conforme a LGPD." />
   <meta property="og:type" content="article" />
   <link rel="icon" type="image/svg+xml" href="../assets/images/logo-excell.png" />
   <link rel="stylesheet" href="../assets/css/style.min.css" />
@@ -23,7 +23,7 @@
       "@id": "https://excellengenharia.com.br/blog/telecom-gravacao-lgpd.html"
     },
     "headline": "Gravação de chamadas nas empresas: cuidados com a LGPD",
-    "description": "Guia técnico sobre gravação de chamadas corporativas, bases legais, transparência, segurança da informação e retenção de dados à luz da LGPD.",
+    "description": "Conheça os cuidados técnicos e de governança para gravação de chamadas: finalidade, bases legais, transparência, segurança e retenção conforme a LGPD.",
     "isPartOf": {
       "@id": "https://excellengenharia.com.br/blog.html#blog"
     },
@@ -135,85 +135,54 @@
       <a href="../blog.html" class="article-back">← Voltar ao Blog</a>
       <span class="blog-card-cat cat-telecom" style="margin-bottom:1rem;">Telecomunicações</span>
       <h1>Gravação de chamadas nas empresas: cuidados com a LGPD</h1>
-      <div class="article-meta">Responsabilidade editorial: EXCELL Engenharia e Tecnologia · Engenharia de Telecomunicações &amp; Conformidade Digital</div>
+      <div class="article-meta">Responsabilidade editorial: EXCELL Engenharia e Tecnologia · Engenharia de Telecomunicações</div>
     </div>
   </div>
   <div class="article-body container">
-    <p>A gravação de chamadas telefônicas é uma prática amplamente adotada nas empresas para auditoria de atendimento, controle de qualidade, treinamento de equipes e prova jurídica de transações comerciais. No entanto, o arquivo de áudio de uma conversa telefônica contém dados pessoais diretos (como tom de voz, biometria vocal, nome e CPF do interlocutor) e, eventualmente, dados pessoais sensíveis.</p>
-
-    <p>Com a vigência da <strong>Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018)</strong> e a fiscalização ativa da Autoridade Nacional de Proteção de Dados (ANPD), a gravação de chamadas telefônicas não pode mais ser realizada sem a fundamentação em uma hipótese legal válida e sem a implementação de controles rígidos de segurança da informação no sistema de PABX.</p>
-
-    <h2>1. Hipóteses Legais para Gravação de Voz sob o Artigo 7º da LGPD</h2>
-    <p>Gravar uma chamada sem se enquadrar em uma das bases legais previstas na legislação constitui tratamento ilícito de dados pessoais. As empresas devem mapear a finalidade da gravação para vinculá-la à hipótese adequada:</p>
-
-    <ul>
-       <li><strong>Cumprimento de obrigação legal ou regulatória (Art. 7º, II):</strong> Pode ser aplicável quando uma norma pertinente exigir o registro. Para o Serviço de Atendimento ao Consumidor (SAC), consulte o <strong>Decreto nº 13.135/2026</strong>, publicado em 13 de outubro de 2026, observando seu âmbito de aplicação e a data de entrada em vigor, além das regras específicas do setor;</li>
-      <li><strong>Execução de Contrato (Art. 7º, V):</strong> Gravações utilizadas para formalização de vendas por telefone, contratação de serviços ou alteração de planos comerciais a pedido do titular dos dados;</li>
-      <li><strong>Legítimo Interesse do Controlador (Art. 7º, IX):</strong> Utilizado em centrais de atendimento convencionais para fins de monitoramento de qualidade, treinamento de colaboradores e segurança da informação, exigindo a realização prévia de um Teste de Proporcionalidade (*LIA - Legitimate Interest Assessment*);</li>
-      <li><strong>Consentimento do Titular (Art. 7º, I):</strong> Aplicável em situações específicas onde o titular concorda expressamente com a gravação para finalidades secundárias (ex.: pesquisas de mercado).</li>
-    </ul>
-
-    <blockquote>
-      <p>"Art. 7º, II e IX da LGPD: O tratamento de dados pessoais pode ser realizado para o cumprimento de obrigação legal ou regulatória pelo controlador ou para atender aos interesses legítimos do controlador, exceto no caso de prevalecerem direitos e liberdades fundamentais do titular."</p>
-    </blockquote>
-
-    <h2>2. Transparência e Notificação Obrigatória na URA (IVR)</h2>
-    <p>O Princípio da Transparência (Art. 6º, VI da LGPD) exige que os titulares sejam previamente informados sobre a realização da gravação antes de o canal ser aberto com o atendente.</p>
-
-    <p>No PABX em Nuvem da EXCELL Engenharia, a Unidade de Resposta Audível (URA / IVR) é configurada com uma mensagem pré-atendimento obrigatória de aviso sonoro:</p>
-
-    <p style="font-style:italic; border-left:3px solid var(--navy); padding-left:1rem; margin:1rem 0;">"Esta chamada está sendo gravada para fins de atendimento, segurança e auditoria de qualidade. Para mais informações sobre como tratamos seus dados pessoais, acesse nosso aviso de privacidade."</p>
-
-    <p>Se a chamada for originada de forma ativa pela empresa (*outbound calling*), o agente de atendimento deve verbalizar a notificação de gravação nos primeiros segundos do contato, obtendo a confirmação do interlocutor.</p>
-
-     <h2>3. Armazenamento, transmissão e controles de segurança</h2>
-     <p>Arquivos de áudio devem receber proteção compatível com os riscos e as finalidades do tratamento. Ao avaliar uma solução, verifique os controles de acesso, a proteção dos dados armazenados e transmitidos e as responsabilidades do fornecedor, sem presumir que todos os recursos estejam presentes por padrão:</p>
-
-    <ul>
-       <li><strong>Criptografia em repouso:</strong> Verifique se a plataforma e o serviço contratado criptografam os arquivos armazenados, qual algoritmo é utilizado, como as chaves são gerenciadas e se essa proteção está habilitada no ambiente;</li>
-       <li><strong>Proteção em trânsito:</strong> Confirme quais protocolos seguros são suportados e efetivamente utilizados na transferência de gravações e backups, conforme a arquitetura do fornecedor;</li>
-       <li><strong>Controle de acesso:</strong> Confirme como os perfis de usuário são definidos, quem pode reproduzir ou exportar gravações e se há suporte a autenticação multifator;</li>
-       <li><strong>Registros de auditoria:</strong> Verifique se a solução registra acessos e exportações, quais eventos são armazenados e por quanto tempo os registros ficam disponíveis.</li>
-    </ul>
-
-    <h2>4. Prazos de Retenção e Ciclo de Vida dos Arquivos de Áudio</h2>
-    <p>A LGPD proíbe a retenção ad aeternum de dados pessoais. O término do tratamento de dados de voz ocorre quando a finalidade foi alcançada ou quando o prazo regulatório expira (Art. 15 da LGPD).</p>
-
-    <h3>Definição de Prazos de Guarda Conforme a Legislação Vigente:</h3>
-
-    <ul>
-       <li><strong>Chamadas de SAC:</strong> O Decreto nº 13.135/2026 prevê, em seu art. 19, a retenção mínima de 90 dias das gravações e mensagens abrangidas. O decreto entra em vigor 20 dias após a publicação e revoga o Decreto nº 11.034/2022; confirme a aplicação ao fornecedor e ao setor envolvidos;</li>
-       <li><strong>Chamadas financeiras ou transacionais:</strong> O prazo de guarda deve ser definido conforme a obrigação legal ou regulatória aplicável, a finalidade do tratamento e a política documentada da organização;</li>
-       <li><strong>Monitoramento interno de qualidade:</strong> Defina o prazo de retenção conforme a finalidade, a necessidade e os riscos, documentando a justificativa e os procedimentos de exclusão.</li>
-    </ul>
-
-     <p>Quando disponíveis na plataforma contratada, políticas de retenção e rotinas de exclusão devem ser configuradas, documentadas e testadas. A empresa deve verificar o alcance da exclusão, inclusive em cópias de segurança, e manter os registros necessários para demonstrar o procedimento.</p>
-
-    <h2>5. Atendimento aos Direitos dos Titulares e o Relatório RIPD (DPIA)</h2>
-    <p>O Artigo 18 da LGPD garante ao titular dos dados o direito de confirmar a existência de tratamento, acessar seus dados e solicitar a eliminação de informações desnecessárias. A infraestrutura de gravação deve viabilizar a localização rápida de uma conversa específica por meio da busca de registros por CPF, número de telefone ou data.</p>
-
-    <p>Quando a gravação for realizada com base no Legítimo Interesse do Controlador, a ANPD orienta a elaboração do <strong>Relatório de Impacto à Proteção de Dados Pessoais (RIPD / DPIA)</strong>. Esse documento técnico descreve os processos de tratamento de voz, avalia os riscos de vazamento e detalha as medidas de segurança cibernética adotadas para mitigar incidentes.</p>
-
-    <h2>Conclusão</h2>
-     <p>A gravação de chamadas exige alinhamento entre finalidade, base legal, transparência, controle de acesso, retenção e segurança da informação. Os recursos disponíveis variam conforme a plataforma, o plano contratado e a configuração. Antes da implantação, a EXCELL pode ajudar a levantar os requisitos e verificar com os fornecedores quais funcionalidades são efetivamente suportadas, sem substituir a avaliação jurídica do cliente.</p>
+    <p class="lead">Gravações telefônicas podem apoiar o atendimento, a segurança de transações e a avaliação de qualidade. Como podem conter dados pessoais e informações confidenciais, sua utilização exige finalidade definida, base legal adequada e controles de acesso e retenção.</p>
+<h2>1. A gravação é tratamento de dados pessoais</h2>
+<p>Uma gravação pode conter nome, telefone, voz, informações contratuais e outros dados pessoais. A voz gravada não é automaticamente dado biométrico sensível: essa classificação depende, entre outros aspectos, de seu tratamento para identificação única de uma pessoa. O conteúdo também pode revelar dados pessoais sensíveis, conforme o contexto da conversa.</p>
+<p>A empresa deve identificar quem atua como controlador e operador, quais finalidades justificam a gravação e quais dados são realmente necessários. A base legal deve ser avaliada para cada finalidade; não existe uma autorização genérica que sirva para todas as chamadas.</p>
+<h2>2. Bases legais e transparência</h2>
+<p>A LGPD prevê diferentes hipóteses legais para o tratamento de dados pessoais, como cumprimento de obrigação legal ou regulatória, execução de contrato, legítimo interesse e consentimento, quando aplicáveis. O legítimo interesse exige análise de finalidade, necessidade, expectativas do titular e salvaguardas, conforme orientação da ANPD; não se aplica ao tratamento de dados pessoais sensíveis.</p>
+<p>Informar o interlocutor sobre a gravação é uma medida importante de transparência, mas a forma e o momento da informação devem ser definidos conforme a finalidade, a base legal e as regras setoriais aplicáveis. Um aviso na URA pode ser um recurso técnico, mas não substitui a definição da base legal nem resolve sozinho todas as obrigações de informação.</p>
+<h2>3. Regras específicas para o SAC</h2>
+<p>Para os fornecedores e serviços abrangidos pelo Decreto nº 13.135/2026, o art. 19 estabelece a manutenção das gravações de chamadas e do conteúdo das mensagens de voz ou texto trocadas pelos canais do SAC por, no mínimo, 90 dias, contados do atendimento. A aplicação deve ser verificada conforme o âmbito do decreto e as regras específicas do setor.</p>
+<p>Esse prazo não deve ser generalizado para toda e qualquer chamada empresarial. Outras atividades podem estar sujeitas a regras próprias ou a prazos definidos a partir da finalidade, da necessidade e de obrigações legais aplicáveis.</p>
+<h2>4. Segurança, acesso e armazenamento</h2>
+<p>Ao avaliar uma plataforma de gravação, a empresa deve verificar:</p>
+<ul>
+<li>quais perfis podem ouvir, exportar ou excluir gravações;</li>
+<li>se há autenticação forte e registros de acesso e exportação;</li>
+<li>como os arquivos são protegidos durante transmissão e armazenamento;</li>
+<li>onde os dados ficam armazenados e quais fornecedores têm acesso;</li>
+<li>como funcionam cópias de segurança, exclusão e resposta a incidentes.</li>
+</ul>
+<p>Esses recursos variam conforme o fabricante, o plano e a configuração. Devem ser confirmados documentalmente e testados no ambiente contratado, em vez de presumidos a partir do nome comercial da solução.</p>
+<h2>5. Retenção e direitos dos titulares</h2>
+<p>O prazo de guarda deve estar relacionado à finalidade e às obrigações aplicáveis. A empresa precisa definir como localizar uma gravação, atender solicitações de titulares, restringir acessos e realizar a eliminação quando cabível, observadas as hipóteses legais de conservação previstas na LGPD.</p>
+<p>O Relatório de Impacto à Proteção de Dados Pessoais pode ser relevante conforme a natureza, o contexto, a escala e os riscos do tratamento. Sua necessidade não deve ser afirmada automaticamente para toda gravação; a avaliação cabe ao controlador, considerando as orientações e determinações da ANPD.</p>
+<h2>Conclusão</h2>
+<p>A gravação de chamadas deve ser tratada como parte de um processo de governança de dados, não apenas como uma função do PABX. A EXCELL pode auxiliar na identificação dos recursos técnicos disponíveis e na configuração da solução, enquanto a definição de bases legais e políticas de privacidade deve ser conduzida pela organização com suporte jurídico e de proteção de dados.</p>
   </div>
   <div class="cta-section">
     <div class="container">
-      <h2>Adeque o Sistema de Gravação de Voz da sua Empresa à LGPD</h2>
-       <p>Entre em contato com a EXCELL para avaliar os requisitos de gravação de chamadas e verificar os recursos de segurança, acesso e retenção disponíveis na solução pretendida.</p>
+      <h2>Avalie os recursos de gravação do seu PABX</h2>
+      <p>A EXCELL pode verificar os recursos de gravação, permissões, exportação e retenção disponíveis na plataforma, sem substituir a avaliação jurídica e de privacidade.</p>
       <div class="cta-actions">
         <a href="../contato.html" class="btn btn-primary">Fale com um Especialista</a>
         <a href="https://wa.me/554320181300" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp (43) 2018-1300</a>
       </div>
     </div>
   </div>
-
-      <section class="article-references" aria-labelledby="article-references-title">
-        <h2 id="article-references-title">Referências técnicas e normativas</h2>
-        <ul>
-        <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais</a></li>
-        </ul>
-      </section>
+  <section class="article-references" aria-labelledby="article-references-title">
+    <h2 id="article-references-title">Referências técnicas e normativas</h2>
+    <ul>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais</a></li>
+<li><a href="https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13135-9-outubro-2026-800053-norma-pe.html" target="_blank" rel="noopener noreferrer">Decreto nº 13.135/2026 — Regras do Serviço de Atendimento ao Consumidor</a></li>
+<li><a href="https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-lanca-guia-orientativo-sobre-legitimo-interesse" target="_blank" rel="noopener noreferrer">ANPD — Guia Orientativo sobre Legítimo Interesse</a></li>
+    </ul>
+  </section>
 </main>
 
   <footer class="site-footer">

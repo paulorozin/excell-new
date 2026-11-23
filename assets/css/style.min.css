@@ -177,7 +177,7 @@ p.lead{font-size:1.15rem;font-weight:400;color:var(--gray-800);line-height:1.65}
 
 /* Article Page */
 .article-container{max-width:820px;margin-inline:auto;padding-block:4rem}
-.article-header{margin-bottom:2.5rem;border-bottom:1px solid var(--gray-200);padding-bottom:1.75rem}
+.article-header{margin-bottom:2.5rem;border-bottom:1px solid var(--gray-200);padding-bottom:2rem}
 .article-header h1{font-size:clamp(1.8rem,3.5vw,2.75rem);margin-bottom:1rem;color:var(--navy)}
 .article-meta{display:flex;gap:1.5rem;font-size:.9rem;color:var(--gray-600)}
 .article-content{font-size:1.075rem;line-height:1.8;color:var(--gray-800)}
@@ -299,7 +299,7 @@ textarea.form-control{min-height:140px;resize:vertical}
 .home-institutional-panel p{max-width:48ch;margin:0 0 .5rem;color:var(--gray-300);line-height:1.75}
 .home-institutional-panel .btn{margin-top:.5rem}
 .site-footer{text-align:left;padding-block:3.5rem 1.25rem}
-.footer-grid{display:grid;grid-template-columns:1.35fr .8fr 1fr;gap:3rem;padding-bottom:2.5rem}
+.footer-grid{display:grid;grid-template-columns:1.35fr .8fr 1fr;gap:3rem;padding-bottom:2.75rem}
 .footer-brand__name{display:inline-flex;flex-direction:column;gap:.15rem;margin-bottom:1rem;color:var(--white);font-family:var(--font-head);font-size:1.65rem;font-weight:800;letter-spacing:.025em;text-decoration:none}
 .footer-brand__name span{font-family:var(--font-body);font-size:.78rem;font-weight:500;letter-spacing:.02em;color:var(--gray-300)}
 .footer-brand p{max-width:38ch;color:var(--gray-300);font-size:.92rem;line-height:1.7}
@@ -332,7 +332,7 @@ textarea.form-control{min-height:140px;resize:vertical}
 .blog-article .article-references{width:100%;max-width:760px;margin-left:auto;margin-right:auto;padding-left:1.5rem;padding-right:1.5rem}.blog-article .cta-section>.container{max-width:760px;text-align:left}.blog-article .cta-section p{margin-left:0;margin-right:0}.blog-article .cta-section .cta-actions{display:flex;width:100%;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
 
 /* Ajuste fino dos espaçamentos finais dos artigos */
-.blog-article .article-body.container{padding-bottom:2.75rem}.blog-article .cta-section{margin-top:2rem;padding-bottom:5.75rem}@media(max-width:600px){.blog-article .article-body.container{padding-bottom:2rem}.blog-article .cta-section{margin-top:1.5rem;padding-bottom:5.25rem}.blog-article .cta-section p{margin-bottom:2.6rem}}
+.blog-article .article-body.container{padding-bottom:2.5rem}.blog-article .cta-section{margin-top:2rem;padding-bottom:5.75rem}@media(max-width:600px){.blog-article .article-body.container{padding-bottom:1.75rem}.blog-article .cta-section{margin-top:1.5rem;padding-bottom:5.25rem}.blog-article .cta-section p{margin-bottom:2.6rem}}
 
 /* Espaçamento sutil entre o texto e os botões da chamada */
 .blog-article .cta-section p{margin-bottom:2.65rem}

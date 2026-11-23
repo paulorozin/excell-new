@@ -1176,11 +1176,11 @@ p { color: var(--text-light); font-size: 1rem; max-width: 70ch; }
 /* Padroniza a coluna final dos artigos: referências e chamada comercial */
 .blog-article .article-references {
   width: 100%;
-  max-width: 760px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .blog-article .cta-section > .container {

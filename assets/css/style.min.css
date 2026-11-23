@@ -329,4 +329,4 @@ textarea.form-control{min-height:140px;resize:vertical}
 .blog-article .article-references,.blog-article .article-references h2,.blog-article .article-references ul,.blog-article .article-references li{text-align:left}
 
 /* Padroniza a coluna final dos artigos: referências e chamada comercial */
-.blog-article .article-references{width:100%;max-width:760px;margin-left:auto;margin-right:auto;padding-left:1.5rem;padding-right:1.5rem}.blog-article .cta-section>.container{max-width:760px;text-align:left}.blog-article .cta-section p{margin-left:0;margin-right:0}.blog-article .cta-section .cta-actions{justify-content:center}
+.blog-article .article-references{width:100%;max-width:760px;margin-left:auto;margin-right:auto;padding-left:1.5rem;padding-right:1.5rem}.blog-article .cta-section>.container{max-width:760px;text-align:left}.blog-article .cta-section p{margin-left:0;margin-right:0}.blog-article .cta-section .cta-actions{display:flex;width:100%;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
